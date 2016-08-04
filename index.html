@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
@@ -41,15 +41,6 @@
         ros.on('close', function () { console.log('Connection to websocket server closed.'); });
 
     </script>
-
-    <style type="text/css">
-        #btn1 {
-            width:200px;
-            height:100px;
-            border-radius:10px;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -68,7 +59,7 @@
             <hr>
 
             <section id="main_content">
-                <p id=""></p>
+              
             </section>
 
             <footer>
@@ -88,8 +79,7 @@
             });
             shell_string.publish(shell_string_msg);
 
-            //document.getElementById("main_content").appendChild(new Node(p));
-
+            document.getElementById("main_content").innerHTML = "<p>1111</p>";
         }
     </script>
 </body>
