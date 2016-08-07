@@ -18,7 +18,7 @@
         // setup connection to the ROS server and prepare the topic
         var ros = new ROSLIB.Ros();
 
-        var host_ip = "192.168.0.7";
+        var websocket = 'ws://192.168.1.7:9090';
 
         var shell_string = new ROSLIB.Topic({
             ros: ros,
@@ -31,15 +31,6 @@
             name: '/system_shell/shell_feedback',
             messageType: 'std_msgs/String'
         });
-
-        ros.connect("wss://" + host_ip + ":9090");
-
-        ros.on('connection', function () { console.log('Connected to websocket server.'); });
-
-        ros.on('error', function (error) { console.log('Error connecting to websocket server: ', error); window.alert('Error connecting to websocket server'); });
-
-        ros.on('close', function () { console.log('Connection to websocket server closed.'); });
-
     </script>
 </head>
 
@@ -73,13 +64,35 @@
         document.getElementById("update").addEventListener('click', update);
         function update(event) {
             document.getElementById("update").removeEventListener('click', update);
-            document.getElementById("update_label").innerHTML = "updating...";
-            var shell_string_msg = new ROSLIB.Message({
-                data: 'git clone https://github.com/hitrobotgroup/ros_org-indigo ~/hitrobot; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "ok"',
-            });
-            shell_string.publish(shell_string_msg);
 
-            document.getElementById("main_content").innerHTML = "<p>1111</p>";
+            document.getElementById("update_label").innerHTML = 'updating...';
+            document.getElementById("main_content").innerHTML = '<p>Connecting to ' + websocket + ' ...</p>';
+
+            ros.connect(websocket);
+
+            ros.on('connection', function () {
+                document.getElementById("main_content").innerHTML = '<p>Connected to websocket server.</p>' + document.getElementById("main_content").innerHTML;
+
+                shell_feedback.subscribe(function (shell_feedback_msg) {
+                    document.getElementById("main_content").innerHTML = '<p>' + shell_feedback_msg.data + '</p>' + document.getElementById("main_content").innerHTML;
+                });
+
+                var shell_string_msg = new ROSLIB.Message({
+                    data: 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Reseting local workspaces ..."; rm -rf ~/workspaces; mkdir -p ~/workspaces/hitrobot; cd ~/workspaces/hitrobot; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to fetch from workspaces ... This may take several minutes, please wait."; git clone https://github.com/hitrobotgroup/ros_org-indigo; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with workspaces."; rm -rf ~/catkin_ws; ln -s ~/workspaces/hitrobot/ros_org-indigo ~/catkin_ws; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linked to local workspaces."; ln -s ~/catkin_ws/install ~/catkin_ws/devel; source ~/.bashrc; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully."; roslaunch bringup bringup-boot.launch;',
+                });
+                shell_string.publish(shell_string_msg);
+            });
+
+            ros.on('error', function (error) {
+                document.getElementById("main_content").innerHTML = '<p>Error connecting to websocket server: ' + error + '</p>' + document.getElementById("main_content").innerHTML;
+            });
+
+            ros.on('close', function () {
+                document.getElementById("main_content").innerHTML = '<p>Connection to websocket server closed.</p>' + document.getElementById("main_content").innerHTML;
+            });
+
+            document.getElementById("update").addEventListener('click', update);
+            document.getElementById("update_label").innerHTML = 'update again';
         }
     </script>
 </body>
