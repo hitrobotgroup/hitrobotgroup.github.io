@@ -76,7 +76,7 @@
 
                 shell_feedback.subscribe(function (shell_feedback_msg) {
                     if ("success" == shell_feedback_msg.data) {
-                        document.getElementById("update_label").innerHTML = 'updated now';
+                        document.getElementById("update_label").innerHTML = 'bingo updated';
                         shell_string_msg.data = 'rosnode kill -a; roslaunch bringup bringup.launch;';
                         shell_string.publish(shell_string_msg);
                     } else if ("failure" == shell_feedback_msg.data) {
