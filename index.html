@@ -18,7 +18,7 @@
         // setup connection to the ROS server and prepare the topic
         var ros = new ROSLIB.Ros();
 
-        var websocket = 'ws://192.168.1.9:9090';
+        var websocket = 'ws://192.168.43.252:9090';
 
         var shell_string = new ROSLIB.Topic({
             ros: ros,
@@ -62,6 +62,7 @@
     </div>
     <script>
         document.getElementById("update").addEventListener('click', update);
+
         function update(event) {
             document.getElementById("update").removeEventListener('click', update);
 
@@ -74,26 +75,34 @@
                 document.getElementById("main_content").innerHTML = '<p>Connected to websocket server.</p>' + document.getElementById("main_content").innerHTML;
 
                 shell_feedback.subscribe(function (shell_feedback_msg) {
-                    document.getElementById("main_content").innerHTML = '<p>' + shell_feedback_msg.data + '</p>' + document.getElementById("main_content").innerHTML;
+                    if ("success" == shell_feedback_msg.data) {
+                        document.getElementById("update_label").innerHTML = 'updated now';
+                        shell_string_msg.data = 'rosnode kill -a; roslaunch bringup bringup.launch;';
+                        shell_string.publish(shell_string_msg);
+                    } else if ("failure" == shell_feedback_msg.data) {
+                        document.getElementById("update_label").innerHTML = 'report to us';
+                    } else {
+                        document.getElementById("main_content").innerHTML = '<p>' + shell_feedback_msg.data + '</p>' + document.getElementById("main_content").innerHTML;
+                    }
                 });
 
                 var shell_string_msg = new ROSLIB.Message({
-                    //data: 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Reseting local workspaces ..."; rm -rf ~/workspaces; mkdir -p ~/workspaces/hitrobot; cd ~/workspaces/hitrobot; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to fetch from workspaces ... This may take several minutes, please wait."; git clone https://github.com/hitrobotgroup/ros_org-indigo; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with workspaces."; rm -rf ~/catkin_ws; ln -s ~/workspaces/hitrobot/ros_org-indigo ~/catkin_ws; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linked to local workspaces."; ln -s ~/catkin_ws/install ~/catkin_ws/devel; source ~/.bashrc; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully."; roslaunch bringup bringup-boot.launch;',
-                    data: 'ping -c 4 -W 5 192.168.1.9 | xargs -I {} rostopic pub -1 /system_shell/shell_feedback std_msgs/String {}; read',
+                    data: 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; if [ -d "release" ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; cd release; git pull; _RC=$?; else rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; git clone -b indigo https://github.com/hitrobotgroup/release; _RC=$?; if [ $_RC -eq 0 ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; cd ~; rm catkin_ws; ln -s workspaces/hitrobot/release catkin_ws; fi; fi; if [ $_RC -eq 0 ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with workspaces."; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully."; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection."; else rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with workspaces, please check the network connection."; fi; if [ $_RC -eq 0 ]; then _FB="success"; else _FB="failure"; fi; rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; unset _RC; unset _FB;',
+                    //data: 'cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; if [ -d "release" ]; then cd release; git pull; _RC=$?; else git clone -b indigo https://github.com/hitrobotgroup/release; _RC=$?; if [ $_RC -eq 0 ]; then cd ~; rm catkin_ws; ln -s workspaces/hitrobot/release catkin_ws; fi; fi; if [ $_RC -eq 0 ]; then _FB="success"; else _FB="failure"; fi; rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; unset _RC; unset _FB;',
+                    //data: 'ping -c 1 -W 5 www.github.com | xargs -I {} rostopic pub -1 /system_shell/shell_feedback std_msgs/String {}; read',
+                    //data: 'source ~/.bashrc; rosnode kill -a; gnome-terminal -x bash -c "roslaunch bringup bringup-boot.launch;"; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully.";',
                 });
                 shell_string.publish(shell_string_msg);
             });
 
             ros.on('error', function (error) {
                 document.getElementById("main_content").innerHTML = '<p>Error connecting to websocket server: ' + error + '</p>' + document.getElementById("main_content").innerHTML;
+                document.getElementById("update_label").innerHTML = 'report to us';
             });
 
             ros.on('close', function () {
                 document.getElementById("main_content").innerHTML = '<p>Connection to websocket server closed.</p>' + document.getElementById("main_content").innerHTML;
             });
-
-            document.getElementById("update").addEventListener('click', update);
-            document.getElementById("update_label").innerHTML = 'update again';
         }
     </script>
 </body>
