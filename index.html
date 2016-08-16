@@ -68,7 +68,6 @@
     </div>
     <script>
         document.getElementById("update").addEventListener('click', update);
-
         function update(event) {
             document.getElementById("update").removeEventListener('click', update);
 
@@ -99,7 +98,33 @@
 
             if (is_first_connection) {
             	is_first_connection = false;
-                shell_string_msg.data = 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; if [ -d "release" ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; cd release; git pull; _RC=$?; else rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; git clone -b indigo https://github.com/hitrobotgroup/release; _RC=$?; if [ $_RC -eq 0 ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; cd ~; rm catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; fi; fi; if [ $_RC -eq 0 ]; then rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with workspaces."; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection."; else rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with workspaces, please check the network connection."; fi; if [ $_RC -eq 0 ]; then _FB="success"; else _FB="failure"; fi; rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; unset _RC; unset _FB;';
+            	shell_string_msg.data = '\
+                                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
+            	                        cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; \
+                                        if [ -d "release" ]; then \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; \
+                                            cd release; git pull; _RC=$?; \
+                                        else \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; \
+                                            git clone -b indigo https://github.com/hitrobotgroup/release; _RC=$?; \
+                                            if [ $_RC -eq 0 ]; then \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
+                                                cd ~; rm -r catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; \
+                                            fi; \
+                                        fi; \
+                                        if [ $_RC -eq 0 ]; then \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with workspaces."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection."; \
+                                        else \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with workspaces, please check the network connection."; \
+                                        fi; \
+                                        if [ $_RC -eq 0 ]; then \
+                                            _FB="success"; \
+                                        else \
+                                            _FB="failure"; \
+                                        fi; \
+                                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; \
+                                        unset _RC; unset _FB;';
                 shell_string.publish(shell_string_msg);
             } else {
                 shell_string_msg.data = 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully.";';
