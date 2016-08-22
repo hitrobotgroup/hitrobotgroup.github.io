@@ -139,11 +139,11 @@
                                                     _TTYS=`dmesg | awk \'/ttyS/{print $4}\'`; \
                                                     sudo sed -i "s/\/dev\/ttySx/\/dev\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
                                                     unset _TTYS; \
-                                                    if [[ hostname -eq "hitrobot-will2" ]]; then \
+                                                    if [[ hostname -eq "will2" ]]; then \
                                                         ; \
                                                     else \
-                                                        sudo sed -i "2s/$(hostname)/hitrobot-will2/" /etc/hosts; \
-                                                        sudo sed -i -e "/$(hostname)/ c hitrobot-will2" /etc/hostname; \
+                                                        sudo sed -i "2s/$(hostname)/will2/" /etc/hosts; \
+                                                        sudo sed -i -e "/$(hostname)/ c will2" /etc/hostname; \
                                                         sudo hostname -F /etc/hostname; \
                                                     fi; \
                                                 fi; \
