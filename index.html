@@ -60,7 +60,7 @@
     </div>
     <script>
         var host_ip = window.location.hostname;
-        if (host_ip == '') {
+        if ('' == host_ip || 'hitrobotgroup.github.io' == host_ip) {
             host_ip = '192.168.0.7';
         }
         var websocket = 'ws://' + host_ip + ':9090';
