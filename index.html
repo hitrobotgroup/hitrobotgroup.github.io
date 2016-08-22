@@ -60,11 +60,12 @@
     </div>
     <script>
         var host_ip = window.location.hostname;
-        if ('' == host_ip || 'hitrobotgroup.github.io' == host_ip) {
+        if ('' == host_ip) {
             host_ip = '192.168.0.7';
+        } else if ('hitrobotgroup.github.io' == host_ip) {
+            host_ip = '192.168.43.252';
         }
         var websocket = 'ws://' + host_ip + ':9090';
-        //var websocket = 'ws://192.168.43.252:9090';
 
         var is_first_connection = true;
         var shell_string_msg = new ROSLIB.Message({
@@ -81,9 +82,6 @@
             ros.connect(websocket);
         }
 
-        //data: 'cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; if [ -d "release" ]; then cd release; git pull; _RC=$?; else git clone -b indigo https://github.com/hitrobotgroup/release; _RC=$?; if [ $_RC -eq 0 ]; then cd ~; rm catkin_ws; ln -s workspaces/hitrobot/release catkin_ws; fi; fi; if [ $_RC -eq 0 ]; then _FB="success"; else _FB="failure"; fi; rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; unset _RC; unset _FB;',
-        //data: 'ping -c 1 -W 5 www.github.com | xargs -I {} rostopic pub -1 /system_shell/shell_feedback std_msgs/String {}; read',
-        //data: 'source ~/.bashrc; rosnode kill -a; gnome-terminal -x bash -c "roslaunch bringup bringup-boot.launch;"; rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully.";',
         function shell_feedback_cb(shell_feedback_msg) {
             if ("success" == shell_feedback_msg.data) {
                 shell_string_msg.data = 'rosnode kill -a; roslaunch bringup bringup.launch;';
