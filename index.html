@@ -110,18 +110,7 @@
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; \
                                             cd release; git pull; _RC=$?; \
                                         else \
-                                            cat /etc/issue | grep 14.04 \
-                                            if [ $? -eq 0 ]; then \
-                                                _BRANCH="indigo"; \
-                                            fi; \
-                                            cat /etc/issue | grep 15.04 \
-                                            if [ $? -eq 0 ]; then \
-                                                _BRANCH="jade"; \
-                                            fi; \
-                                            cat /etc/issue | grep 16.04 \
-                                            if [ $? -eq 0 ]; then \
-                                                _BRANCH="kinetic"; \
-                                            fi; \
+                                            _BRANCH=$ROS_DISTRO; \
                                             uname -m | grep arm \
                                             if [ $? -eq 0 ]; then \
                                                 _BRANCH=$_BRANCH"-arm"; \
@@ -139,11 +128,11 @@
                                                     _TTYS=`dmesg | awk \'/ttyS/{print $4}\'`; \
                                                     sudo sed -i "s/\/dev\/ttySx/\/dev\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
                                                     unset _TTYS; \
-                                                    if [[ hostname -eq "will2" ]]; then \
+                                                    if [[ hostname -eq "hitrobot-will2" ]]; then \
                                                         ; \
                                                     else \
-                                                        sudo sed -i "2s/$(hostname)/will2/" /etc/hosts; \
-                                                        sudo sed -i -e "/$(hostname)/ c will2" /etc/hostname; \
+                                                        sudo sed -i "2s/$(hostname)/hitrobot-will2/" /etc/hosts; \
+                                                        sudo sed -i -e "/$(hostname)/ c hitrobot-will2" /etc/hostname; \
                                                         sudo hostname -F /etc/hostname; \
                                                     fi; \
                                                 fi; \
