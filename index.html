@@ -84,12 +84,13 @@
 
         function shell_feedback_cb(shell_feedback_msg) {
             if ("success" == shell_feedback_msg.data) {
-                shell_string_msg.data = 'rosnode kill -a; roslaunch bringup bringup.launch;';
+//                shell_string_msg.data = 'rosnode kill -a; roslaunch bringup bringup-boot.launch;';
+                shell_string_msg.data = 'sudo reboot;';
                 shell_string.publish(shell_string_msg);
                 document.getElementById("update_label").innerHTML = 'bingo updated';
                 setTimeout(function () {
                     ros.connect(websocket);
-                }, 5000);
+                }, 60000);
             } else if ("failure" == shell_feedback_msg.data) {
                 document.getElementById("update_label").innerHTML = 'report to us';
             } else {
@@ -111,7 +112,7 @@
                                             cd release; git pull; _RC=$?; \
                                         else \
                                             _BRANCH=$ROS_DISTRO; \
-                                            uname -m | grep arm \
+                                            uname -m | grep arm; \
                                             if [ $? -eq 0 ]; then \
                                                 _BRANCH=$_BRANCH"-arm"; \
                                             fi; \
@@ -120,17 +121,15 @@
                                             unset _BRANCH; \
                                             if [ $_RC -eq 0 ]; then \
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
-                                                cd ~; rm -r catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; \
-                                                if [[ whoami -eq "hitrobot" ]]; then \
+                                                cd ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; \
+                                                if [[ `whoami` == hitrobot ]]; then \
                                                     cd ~/catkin_ws/install/; \
                                                     sudo chown root:root ./lib/stm32_driver/stm32_driver; \
                                                     sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
-                                                    _TTYS=`dmesg | awk \'/ttyS/{print $4}\'`; \
-                                                    sudo sed -i "s/\/dev\/ttySx/\/dev\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
+                                                    _TTYS=`dmesg | awk \'\\\'\'/ttyS/{print $4}\'\\\'\'`; \
+                                                    sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
                                                     unset _TTYS; \
-                                                    if [[ hostname -eq "hitrobot-will2" ]]; then \
-                                                        ; \
-                                                    else \
+                                                    if [[ `hostname` != hitrobot-will2 ]]; then \
                                                         sudo sed -i "2s/$(hostname)/hitrobot-will2/" /etc/hosts; \
                                                         sudo sed -i -e "/$(hostname)/ c hitrobot-will2" /etc/hostname; \
                                                         sudo hostname -F /etc/hostname; \
