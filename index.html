@@ -135,6 +135,13 @@
                                                         sudo hostname -F /etc/hostname; \
                                                     fi; \
                                                 fi; \
+                                                cd ~/.config/autostart/; \
+                                                if [ -f "gnome-terminal.desktop" ]; then \
+                                                    mv gnome-terminal.desktop ros_org.desktop; \
+                                                    sed -i -e "s/Exec=.*/Exec=gnome-terminal -x .\/catkin_ws\/boot.sh/" ros_org.desktop; \
+                                                    sed -i -e "s/Name[en_US]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
+                                                    sed -i -e "s/Name=.*/Name=ros_org/" ros_org.desktop; \
+                                                fi; \
                                             fi; \
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
