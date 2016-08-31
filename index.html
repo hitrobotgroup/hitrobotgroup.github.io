@@ -61,7 +61,7 @@
     <script>
         var host_ip = window.location.hostname;
         if ('' == host_ip) {
-            host_ip = '192.168.44.129';
+            host_ip = '192.168.0.7';
         } else if ('hitrobotgroup.github.io' == host_ip) {
             host_ip = '192.168.43.7';
         }
@@ -102,9 +102,8 @@
             	is_first_connection = false;
             	//shell_string_msg.data = '\
                 //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
-                //                                        sudo sed -i -e "/$(hostname)/ c ouiyeah-deimos" /etc/hostname; \
-            	//sudo sed -i "2s/$(hostname)/hitrobot-will2/" /etc/hosts; \
-                //                                        sudo hostname -F /etc/hostname; \
+                //                                cd ~/.config/autostart/; \
+            	//sed -i -e "s/Name\\\[en_US\\\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
                 //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
                 //                        read;';
             	shell_string_msg.data = '\
@@ -124,15 +123,6 @@
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with $_BRANCH branch."; \
-                                            if [[ `whoami` == hitrobot ]]; then \
-                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Setting hitrobot hardware ..."; \
-                                                cd ~/catkin_ws/devel/; \
-                                                _TTYS=`dmesg | awk \'\\\'\'/ttyS/{print $4}\'\\\'\'`; \
-                                                sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
-                                                unset _TTYS; \
-                                                sudo chown root:root ./lib/stm32_driver/stm32_driver; \
-                                                sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
-                                            fi; \
                                             if [[ -n $_BRANCH ]]; then \
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
                                                 cd ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; \
@@ -141,9 +131,18 @@
                                                     rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Resetting autostart config ..."; \
                                                     mv gnome-terminal.desktop ros_org.desktop; \
                                                     sed -i -e "s/Exec=.*/Exec=gnome-terminal -x bash -c \'\\\'\'.\\\/catkin_ws\\\/boot.sh\'\\\'\'/" ros_org.desktop; \
-                                                    sed -i -e "s/Name\[en_US\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
+                                                    sed -i -e "s/Name\\\[en_US\\\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
                                                     sed -i -e "s/Name=.*/Name=ros_org/" ros_org.desktop; \
                                                 fi; \
+                                            fi; \
+                                            if [[ `whoami` == hitrobot ]]; then \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Setting hitrobot hardware ..."; \
+                                                cd ~/catkin_ws/devel/; \
+                                                _TTYS=`dmesg | awk \'\\\'\'/ttyS/{print $4}\'\\\'\'`; \
+                                                sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
+                                                unset _TTYS; \
+                                                sudo chown root:root ./lib/stm32_driver/stm32_driver; \
+                                                sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
                                             fi; \
                                         else \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with $_BRANCH branch, please check the network connection."; \
@@ -156,7 +155,7 @@
                                         rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; \
                                         unset _FB; \
                                         if [ $_RC -eq 0 ]; then \
-                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection, please do not close and wait for reconnection."; \
                                             if [[ -n $_BRANCH ]]; then \
                                                 if [[ `whoami` == hitrobot ]]; then \
                                                     if [[ `hostname` != hitrobot-will2 ]]; then \
