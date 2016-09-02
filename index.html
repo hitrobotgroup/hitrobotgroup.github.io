@@ -102,8 +102,11 @@
             	is_first_connection = false;
             	//shell_string_msg.data = '\
                 //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
-                //                                cd ~/.config/autostart/; \
-            	//sed -i -e "s/Name\\\[en_US\\\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
+                //(for pa3)
+                //sudo chown root:root ./lib/stm32_driver/stm32_driver; \
+                //                                sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
+                //map map_edit
+                //ro/rw
                 //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
                 //                        read;';
             	shell_string_msg.data = '\
@@ -114,6 +117,8 @@
                                             cd release; git pull; _RC=$?; \
                                         else \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; \
+                                            sudo rm -f /etc/resolv.conf; \
+                                            sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf; \
                                             _BRANCH=$ROS_DISTRO; \
                                             uname -m | grep arm; \
                                             if [ $? -eq 0 ]; then \
@@ -123,14 +128,22 @@
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with $_BRANCH branch."; \
+                                            if [ -d "/var/www" ]; then \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Checking website server ..."; \
+                                            else \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Installing website server ..."; \
+                                                sudo apt-get install -y apache2; \
+                                                sudo rm -rf /var/www; \
+                                                sudo ln -s ~/catkin_ws/website/ /var/www; \
+                                            fi; \
                                             if [[ -n $_BRANCH ]]; then \
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
-                                                cd ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; \
+                                                cd ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; rm -f ~/Desktop/*; \
                                                 cd ~/.config/autostart/; \
                                                 if [ -f "gnome-terminal.desktop" ]; then \
                                                     rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Resetting autostart config ..."; \
                                                     mv gnome-terminal.desktop ros_org.desktop; \
-                                                    sed -i -e "s/Exec=.*/Exec=gnome-terminal -x bash -c \'\\\'\'.\\\/catkin_ws\\\/boot.sh\'\\\'\'/" ros_org.desktop; \
+                                                    sed -i -e "s/Exec=.*/Exec=gnome-terminal -x bash -c \'\\\'\'~\\\/catkin_ws\\\/boot.sh\'\\\'\'/" ros_org.desktop; \
                                                     sed -i -e "s/Name\\\[en_US\\\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
                                                     sed -i -e "s/Name=.*/Name=ros_org/" ros_org.desktop; \
                                                 fi; \
@@ -141,8 +154,6 @@
                                                 _TTYS=`dmesg | awk \'\\\'\'/ttyS/{print $4}\'\\\'\'`; \
                                                 sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
                                                 unset _TTYS; \
-                                                sudo chown root:root ./lib/stm32_driver/stm32_driver; \
-                                                sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
                                             fi; \
                                         else \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with $_BRANCH branch, please check the network connection."; \
