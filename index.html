@@ -134,7 +134,7 @@
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Installing website server ..."; \
                                                 sudo apt-get install -y apache2; \
                                                 sudo rm -rf /var/www; \
-                                                sudo ln -s ~/catkin_ws/website/ /var/www; \
+                                                sudo ln -s ~/catkin_ws/www/ /var/www; \
                                             fi; \
                                             if [[ -n $_BRANCH ]]; then \
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
