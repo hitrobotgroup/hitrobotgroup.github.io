@@ -114,7 +114,7 @@
             	                        cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; \
                                         if [ -d "release" ]; then \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; \
-                                            cd release; git pull; _RC=$?; \
+                                            cd release; cp -f install/share/bringup/param/map* ~; git reset --hard HEAD^; git pull; _RC=$?; \
                                         else \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; \
                                             sudo rm -f /etc/resolv.conf; \
@@ -138,7 +138,7 @@
                                             fi; \
                                             if [[ -n $_BRANCH ]]; then \
                                                 rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
-                                                cd ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; rm -f ~/Desktop/*; \
+                                                cd ~; cp -f catkin_ws/src/bringup/param/map* ~; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; rm -f ~/Desktop/*; \
                                                 cd ~/.config/autostart/; \
                                                 if [ -f "gnome-terminal.desktop" ]; then \
                                                     rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Resetting autostart config ..."; \
@@ -155,8 +155,10 @@
                                                 sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
                                                 unset _TTYS; \
                                             fi; \
+                                            mv -f ~/map* ~/catkin_ws/install/share/bringup/param; \
                                         else \
                                             rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with $_BRANCH branch, please check the network connection."; \
+                                            rm -f ~/map*; \
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
                                             _FB="success"; \
