@@ -20,13 +20,13 @@
 
         var shell_string = new ROSLIB.Topic({
             ros: ros,
-            name: '/shell_string',
+            name: '/system_shell/shell_string',
             messageType: 'std_msgs/String'
         });
 
         var shell_feedback = new ROSLIB.Topic({
             ros: ros,
-            name: '/shell_feedback',
+            name: '/system_shell/shell_feedback',
             messageType: 'std_msgs/String'
         });
     </script>
@@ -61,7 +61,7 @@
     <script>
         var host_ip = window.location.hostname;
         if ('' == host_ip) {
-            host_ip = '192.168.0.107';
+            host_ip = '192.168.0.7';
         } else if ('hitrobotgroup.github.io' == host_ip) {
             host_ip = '192.168.43.7';
         }
@@ -83,7 +83,6 @@
         }
 
         function shell_feedback_cb(shell_feedback_msg) {
-            console.log(shell_feedback_msg);
             if ("success" == shell_feedback_msg.data) {
                 setTimeout(function () {
                     ros.connect(websocket);
@@ -102,22 +101,22 @@
             if (is_first_connection) {
             	is_first_connection = false;
             	//shell_string_msg.data = '\
-                //                        rostopic pub -1 /shell_feedback std_msgs/String "Received from system_shell node."; \
+                //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
                 //(for pa3)
                 //sudo chown root:root ./lib/stm32_driver/stm32_driver; \
                 //                                sudo chmod u+s ./lib/stm32_driver/stm32_driver; \
                 //map map_edit
                 //ro/rw
-                //                        rostopic pub -1 /shell_feedback std_msgs/String "Received from system_shell node."; \
+                //                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
                 //                        read;';
             	shell_string_msg.data = '\
-                                        rostopic pub -1 /shell_feedback std_msgs/String "Received from rosbridge_shell node."; \
+                                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Received from system_shell node."; \
             	                        cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; \
                                         if [ -d "release" ]; then \
-                                            rostopic pub -1 /shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to pull from workspaces ... This may take several minutes, please wait."; \
                                             cd release; git reset --hard HEAD^; git pull; _RC=$?; \
                                         else \
-                                            rostopic pub -1 /shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Trying to clone from workspaces ... This may take several minutes, please wait."; \
                                             sudo rm -f /etc/resolv.conf; \
                                             sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf; \
                                             _BRANCH=$ROS_DISTRO; \
@@ -128,33 +127,61 @@
                                             git clone -b $_BRANCH https://github.com/hitrobotgroup/release; _RC=$?; \
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
-                                            rostopic pub -1 /shell_feedback std_msgs/String "Synchronized with $_BRANCH branch."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Synchronized with $_BRANCH branch."; \
                                             if [ -d "/var/www" ]; then \
-                                                rostopic pub -1 /shell_feedback std_msgs/String "Checking website server ..."; \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Checking website server ..."; \
                                             else \
-                                                rostopic pub -1 /shell_feedback std_msgs/String "Installing website server ..."; \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Installing website server ..."; \
                                                 sudo apt-get install -y apache2; \
                                                 sudo rm -rf /var/www; \
                                                 sudo ln -s ~/catkin_ws/www/ /var/www; \
                                             fi; \
+                                            if [[ -n $_BRANCH ]]; then \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Linking to local workspaces ..."; \
+                                                cd ~; cp -f catkin_ws/src/bringup/param/map* ~/.ros; rm -rf catkin_ws; ln -s workspaces/hitrobot/release/ catkin_ws; rm -f ~/Desktop/*; \
+                                                cd ~/.config/autostart/; \
+                                                if [ -f "gnome-terminal.desktop" ]; then \
+                                                    rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Resetting autostart config ..."; \
+                                                    mv gnome-terminal.desktop ros_org.desktop; \
+                                                    sed -i -e "s/Exec=.*/Exec=gnome-terminal -x bash -c \'\\\'\'~\\\/catkin_ws\\\/boot.sh\'\\\'\'/" ros_org.desktop; \
+                                                    sed -i -e "s/Name\\\[en_US\\\]=.*/Name[en_US]=ros_org/" ros_org.desktop; \
+                                                    sed -i -e "s/Name=.*/Name=ros_org/" ros_org.desktop; \
+                                                fi; \
+                                            fi; \
+                                            if [[ `whoami` == hitrobot ]]; then \
+                                                rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Setting hitrobot hardware ..."; \
+                                                cd ~/catkin_ws/devel/; \
+                                                _TTYS=`dmesg | awk \'\\\'\'/ttyS/{print $4}\'\\\'\'`; \
+                                                sudo sed -i "s/\\\/dev\\\/ttySx/\\\/dev\\\/$_TTYS/" ./share/bringup/launch/will2/will2-base.launch; \
+                                                unset _TTYS; \
+                                            fi; \
                                         else \
-                                            rostopic pub -1 /shell_feedback std_msgs/String "Failed to synchronized with $_BRANCH branch, please check the network connection."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Failed to synchronized with $_BRANCH branch, please check the network connection."; \
                                         fi; \
                                         if [ $_RC -eq 0 ]; then \
                                             _FB="success"; \
                                         else \
                                             _FB="failure"; \
                                         fi; \
-                                        rostopic pub -1 /shell_feedback std_msgs/String $_FB; \
+                                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String $_FB; \
                                         unset _FB; \
                                         if [ $_RC -eq 0 ]; then \
-                                            rostopic pub -1 /shell_feedback std_msgs/String "Restarting websocket connection, please do not close and wait for reconnection."; \
+                                            rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Restarting websocket connection, please do not close and wait for reconnection."; \
+                                            if [[ -n $_BRANCH ]]; then \
+                                                if [[ `whoami` == hitrobot ]]; then \
+                                                    if [[ `hostname` != hitrobot-will2 ]]; then \
+                                                        rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Changing hostname to hitrobot-will2 ..."; \
+                                                        sudo sed -i -e "/$(hostname)/ c hitrobot-will2" /etc/hostname; \
+                                                        sudo sed -i "2s/$(hostname)/hitrobot-will2/" /etc/hosts; \
+                                                    fi; \
+                                                fi; \
+                                            fi; \
                                             sudo reboot; \
                                         fi; \
                                         unset _BRANCH; unset _RC;';
                 shell_string.publish(shell_string_msg);
             } else {
-                shell_string_msg.data = 'rostopic pub -1 /shell_feedback std_msgs/String "Updated to the newest version successfully.";';
+                shell_string_msg.data = 'rostopic pub -1 /system_shell/shell_feedback std_msgs/String "Updated to the newest version successfully.";';
                 shell_string.publish(shell_string_msg);
                 document.getElementById("update_label").innerHTML = 'bingo updated';
             }
