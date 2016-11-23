@@ -72,7 +72,8 @@
 
 
             $("#btn-software-update").click(function () {
-                var url = "http://" + ip + ":8808/software_update";
+                var url = "https://" + ip + ":8809/software_update";
+                alert(111);
                 $.ajax({
                     type: 'post',
                     url: url,
