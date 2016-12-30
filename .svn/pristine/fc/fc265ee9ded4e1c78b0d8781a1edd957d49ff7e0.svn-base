@@ -1,0 +1,99 @@
+﻿<html>
+<head>
+    <title>自动更新</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css">
+    <script src="jquery/jquery-1.8.3.min.js"></script>
+    <script>
+        $(document).bind('mobileinit', function () {
+            $.mobile.changePage.defaults.changeHash = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
+        });
+    </script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+
+
+    <script src="js/eventemitter2.min.js"></script>
+    <script src="js/roslib.min.js"></script>
+    <script src="js/three.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+            var ip = window.location.href.split('?')[1];
+            var update_data = '\
+                                        rostopic pub -1 /shell_feedback std_msgs/String "software_update:Received from rosbridge_shell node."; \
+            	                        cd ~; mkdir -p workspaces/hitrobot/; cd workspaces/hitrobot/; \
+                                        if [ -d "release" ]; then \
+                                            rostopic pub -1 /shell_feedback std_msgs/String "software_update:Trying to pull from workspaces ... This may take several minutes, please wait."; \
+                                            cd release; git reset --hard HEAD^; git pull; _RC=$?; \
+                                        else \
+                                            rostopic pub -1 /shell_feedback std_msgs/String "software_update:Trying to clone from workspaces ... This may take several minutes, please wait."; \
+                                            sudo rm -f /etc/resolv.conf; \
+                                            sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf; \
+                                            _BRANCH=$ROS_DISTRO; \
+                                            uname -m | grep arm; \
+                                            if [ $? -eq 0 ]; then \
+                                                _BRANCH=$_BRANCH"-arm"; \
+                                            fi; \
+                                            git clone -b $_BRANCH https://github.com/hitrobotgroup/release; _RC=$?; \
+                                        fi; \
+                                        if [ $_RC -eq 0 ]; then \
+                                            rostopic pub -1 /shell_feedback std_msgs/String "software_update:Synchronized with $_BRANCH branch."; \
+                                            if [ -d "/var/www" ]; then \
+                                                rostopic pub -1 /shell_feedback std_msgs/String "software_update:Checking website server ..."; \
+                                            else \
+                                                rostopic pub -1 /shell_feedback std_msgs/String "software_update:Installing website server ..."; \
+                                                sudo apt-get install -y apache2; \
+                                                sudo rm -rf /var/www; \
+                                                sudo ln -s ~/catkin_ws/www/ /var/www; \
+                                            fi; \
+                                        else \
+                                            rostopic pub -1 /shell_feedback std_msgs/String "software_update:Failed to synchronized with $_BRANCH branch, please check the network connection."; \
+                                        fi; \
+                                        if [ $_RC -eq 0 ]; then \
+                                            _FB="software_update:success"; \
+                                        else \
+                                            _FB="software_update:failure"; \
+                                        fi; \
+                                        rostopic pub -1 /shell_feedback std_msgs/String $_FB; \
+                                        unset _FB; \
+                                        if [ $_RC -eq 0 ]; then \
+                                            rostopic pub -1 /shell_feedback std_msgs/String "software_update:Restarting websocket connection, please do not close and wait for reconnection."; \
+                                            sudo reboot; \
+                                        fi; \
+                                        unset _BRANCH; unset _RC;';
+
+
+            $("#btn-software-update").click(function () {
+                var url = "http://" + ip + ":8808/software_update";
+                $.ajax({
+                    type: 'post',
+                    url: url,
+                    data: { data: update_data },
+                    async: true,
+                    success: function (data) {
+                        if (data.status == "success") {
+                            console.log("更新命令提交成功");
+                            $("#info").text("Updating...");
+                        }
+                    },
+                    dataType: "json"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="page" id="hrg-main-page">
+        <div>
+            <a href="#" data-transition="slide" data-role="button" data-icon="arrow-d" data-iconpos="right" data-theme="b" id="btn-software-update">远程更新</a>
+            <h2 id="info" style="text-align: center; color: green"></h2>
+        </div>
+    </div>
+</body>
+</html>
