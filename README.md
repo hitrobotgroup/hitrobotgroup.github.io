@@ -1,8 +1,11 @@
 # manual
 
-download this package
+download and extract this package
 
-use 
+move the target zip files(e.g. release-indigo.zip) to pkg folder
 
-http://hitrobotgroup.github.io/
-https://hitrobotgroup.github.io/
+use update.bat(for windows) or update.sh(for linux) to transmit zip files to ubuntu
+
+double click index.html to update offline
+
+visit <https://hitrobotgroup.github.io/> for update tutorial
