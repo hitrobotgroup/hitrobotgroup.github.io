@@ -20,7 +20,7 @@
 
 0. Open the manipulation interface and check the current version in the '地图向导'.  Compare the current version with the latest version according to https://github.com/hitrobotgroup/release/blob/master/README.md.    
 
-0. If the vision is latest, continue. Otherwise, download the latest one from the https://github.com/hitrobotgroup/release. Create a new folder in the root directory of the 'hitrobotgroup.github.io-master'. The name of the folder has to be 'pkg'. Make sure that the folder 'hitrobotgroup.github.io-master' inculding all the files are in the upper PC or Navigation IPC.
+0. If the vision is latest, continue. Otherwise, download the latest one from the https://github.com/hitrobotgroup/release. The update branch is indigo NOT MASTER! Create a new folder in the root directory of the 'hitrobotgroup.github.io-master'. The name of the folder has to be 'pkg'. Make sure that the folder 'hitrobotgroup.github.io-master' inculding all the files are in the upper PC or Navigation IPC.
 
 0. Use update.bat(for windows) or update.sh(for linux) to transmit zip files to ubuntu. If the default name is correct, then return.
 
