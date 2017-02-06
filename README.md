@@ -40,3 +40,13 @@
 0. In the path \hitrobotgroup.github.io-master\map, click 'map_edit-get.cmd' to get map_edit.pgm. Click 'map_edit-set.cmd' to upload the modified map_edit.pgm
 
 visit <https://hitrobotgroup.github.io/> for update tutorial
+
+# BIOS settings
+
+## PA3
+
+0. Keep pressing delete in order to enter in BIOS.
+0. Advanced -> Module Serial port -> Serial port [0-1] -> Change to "Enable"
+0. Chipset -> South Bridge -> USB Configuration -> XHCI Mode -> Change to "Enable"
+0. Boot -> Power Loss Control ->  Set "Remain off" when applies to will 2 that M4 will send order to enable PA3 power on. Set "turn on" when applies to previous verison will that press the main button to enable PA3 power on.
+0. Press F10 (save and quit).
