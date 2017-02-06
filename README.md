@@ -193,3 +193,42 @@ Drag 输出PWM then click 操作, if necessary to stop, please click 停止.
 
 ![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/iwm_115.PNG)
 
+# SICK_LIDAR_Setup
+The process of SICK lidar setting
+
+#PC网络IP地址设置   
+控制面板 -> 本地连接 -> 属性 -> Internet 协议版本 4（TCP/IPv4）
+   
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/slsm_1.png) 
+
+电脑IP地址设置为：192.168.0.X    
+子掩码为：255.255.255.0   
+网关：0.0.0.0   
+
+#SICK lidar 连接
+第一步是要连接上激光。   
+点击ip地址旁的编辑图标，如下图：   
+
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/slsm_2.png) 
+   
+点击ip地址为自动。然后点确定，能顺利连接。   
+
+#ip修改
+接下来重复上面的连接步骤，在自动之前把ip地址定位192.168.0.X 子掩码为255.255.255.0 如下图：   
+  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/slsm_3.png)    
+
+点击确定， 然后在设备的右上角的三角下拉菜单里，点切换到在线。
+
+然后会自动弹出写入和读取参数的窗口。
+
+写入参数，如下图
+
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/slsm_4.png)    
+
+#永久保存
+这是最重要的一步，点一下显示的激光设备，再点参数 -> 永久保存   
+
+
+#结束   
+
