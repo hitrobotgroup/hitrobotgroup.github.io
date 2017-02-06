@@ -56,3 +56,18 @@ visit <https://hitrobotgroup.github.io/> for update tutorial
 0. Keep pressing F2 in order to enter in BIOS.
 0. Power -> After Power Failure -> Set "turn on" to enable PA3 power on.
 0. Press F10 (save and quit).
+
+# ubuntu-windows 文件共享
+
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_1.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_2.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_3.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_4.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_5.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_6.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_7.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_8.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_9.PNG)  
+![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_10.PNG)  
+
+From: http://www.sijiazhentan.top/news/c2pfZjcxZDY...
