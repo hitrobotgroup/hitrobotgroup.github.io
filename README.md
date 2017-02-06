@@ -51,12 +51,8 @@ visit <https://hitrobotgroup.github.io/> for update tutorial
 0. Boot -> Power Loss Control ->  Set "Remain off" when applies to will 2 that M4 will send order to enable PA3 power on. Set "turn on" when applies to previous verison will that press the main button to enable PA3 power on.
 0. Press F10 (save and quit).
 
-##Grub
+## NUC
 
-1. Open one terminal and write "sudo gedit /etc/grub.d/10_linux"
-2. In the line 177, change "ro" to "rw".
-3. sudo update-grub
-4. cd /boot/grub
-5. sudo chmod 644 grub.cfg
-6. sudo gedit grub 
-7. in the line 86, set timeout = 15.(Previously, -1).
+0. Keep pressing F2 in order to enter in BIOS.
+0. Power -> After Power Failure -> Set "turn on" to enable PA3 power on.
+0. Press F10 (save and quit).
