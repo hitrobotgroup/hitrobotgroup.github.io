@@ -66,6 +66,10 @@ visit <https://hitrobotgroup.github.io/> for update tutorial
 
 ***
 
+以下未更新
+
+***
+
 # ubuntu-windows 文件共享
 
 ![](https://github.com/hitrobotgroup/hitrobotgroup.github.io/raw/master/pics/uwm_1.PNG)  
