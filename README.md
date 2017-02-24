@@ -1,21 +1,4 @@
 
-# install system
-
-keep pressing "del"(for PA3) or "F10"(for NUC) to select boot disk
-![install_start](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_start.png "install_start")
-![select_language](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_language.png "select_language")
-![select_custom](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_custom.png "select_custom")
-![select_type](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_type.png "select_type")
-![select_location](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_location.png "select_location")
-![select_keyboard](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_keyboard.png "select_keyboard")
-
-note that if ubuntu system was reinstalled this hostname settings page would not be presented
-![select_hostname](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_hostname.png "select_hostname")
-![install_wait](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_wait.png "install_wait")
-![install_complete](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_complete.png "install_complete")
-
-***
-
 # bios settings
 
 ## PA3
@@ -34,12 +17,29 @@ note that if ubuntu system was reinstalled this hostname settings page would not
 
 ***
 
+# install system
+
+keep pressing "del"(for PA3) or "F10"(for NUC) to select boot disk
+![install_start](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_start.png "install_start")
+![select_language](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_language.png "select_language")
+![select_custom](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_custom.png "select_custom")
+![select_type](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_type.png "select_type")
+![select_location](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_location.png "select_location")
+![select_keyboard](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_keyboard.png "select_keyboard")
+
+note that if ubuntu system was reinstalled this hostname settings page would not be presented
+![select_hostname](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/select_hostname.png "select_hostname")
+![install_wait](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_wait.png "install_wait")
+![install_complete](https://raw.githubusercontent.com/ouiyeah/ubuntu/master/img/install_complete.png "install_complete")
+
+***
+
 # update options
 
 ## upgrade old version (the 2.0 version for will2)
 
-0. Download the files namely 'hitrobotgroup.github.io-master' from the link 'https://github.com/hitrobotgroup/hitrobotgroup.github.io' 
-0. Unzip and copy the 'dbparam-indigo.zip' to the root directory of our own USB Stick
+0. Download and unzip the files namely 'hitrobotgroup.github.io-master' from the link 'https://github.com/hitrobotgroup/hitrobotgroup.github.io' 
+0. Copy the './bin/zip/dbparam-indigo.zip' to the root directory of our own USB Stick
 0. Plug this USB Stick in the Navigation IPC(i.e. PA3, YanXiang.etc)
 0. Run Index.html in the root directory of the folder 'hitrobotgroup.github.io-master'
 0. Set the correct IP address(192.168.0.7 typically). Then press connect.
@@ -49,22 +49,20 @@ note that if ubuntu system was reinstalled this hostname settings page would not
 
 ## regular update
 
-0. Download the files namely 'hitrobotgroup.github.io-master' from the link 'https://github.com/hitrobotgroup/hitrobotgroup.github.io'  
-0. Open the manipulation interface and check the current version in the '地图向导'.  Compare the current version with the latest version according to https://github.com/hitrobotgroup/release/blob/master/README.md.    
-0. If the vision is latest, continue. Otherwise, download the latest one from the https://github.com/hitrobotgroup/release. The update branch is indigo NOT MASTER! Create a new folder in the root directory of the 'hitrobotgroup.github.io-master'. The name of the folder has to be 'pkg'. Make sure that the folder 'hitrobotgroup.github.io-master' inculding all the files are in the upper PC or Navigation IPC.
-0. Use update.cmd(for windows) or update.sh(for linux) to transmit zip files to ubuntu. If the default name is correct, then return.
+0. Download and unzip the files namely 'hitrobotgroup.github.io-master' from the link 'https://github.com/hitrobotgroup/hitrobotgroup.github.io'  
+0. Copy the given file 'release-indigo.zip' to './bin/pkg/'. (The name of the folder has to be 'pkg' if missed. Make sure that the folder 'hitrobotgroup.github.io-master' inculding all the files are in the upper PC or Navigation IPC.)
+0. Use update.cmd(for windows) or update.sh(for linux) in './bin/' to transmit zip files to ubuntu. If the default name is correct, then return.
 0. Run Index.html in the root directory of the folder 'hitrobotgroup.github.io-master'
-0. Set the correct IP address. Then press connect. If the icon in the connection row turns to be red, contiune the next step.
+0. Set the correct IP address(192.168.0.7 typically). Then press connect.
 0. Choose '离线本地更新' and then click 'update'
 0. If the update information is 'success', the update of the latest version is done.
-0. run the boot.sh and active the update.
-0. It is better to check the RVIZ or check the mapping funtion in the manipulation interface.
+0. Please remeber to reboot the Linux system in order to active the upgrade.
 
 visit <https://hitrobotgroup.github.io/> for update tutorial
 
-## Map transmition
+## map transmition
 
-0. In the path \hitrobotgroup.github.io-master\map, click 'map_edit-get.cmd' to get map_edit.pgm. Click 'map_edit-set.cmd' to upload the modified map_edit.pgm
+0. In the path './bin/map', click 'map_edit-get.cmd' to get map_edit.pgm. Click 'map_edit-set.cmd' to upload the modified map_edit.pgm
 
 ***
 
