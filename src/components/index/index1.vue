@@ -9,20 +9,20 @@
       <swiper :options="productsSwiperOption" class="swiperProducts">
         <swiper-slide class="swiper-item flex">
           <div class="productsBg agv4"></div>
-          <p @click="toProducts('AGV4')">轻载激光导航AGV</p>
+          <p @click="toProducts('AGV4')">{{this.$store.state.agv4.nameCn}}</p>
+        </swiper-slide>
+        <swiper-slide class="swiper-item flex">
+          <div class="productsBg lanJingLing"></div>
+          <p @click="toProducts('forklift')">{{this.$store.state.ljl.nameCn}}</p>
         </swiper-slide>
         <swiper-slide class="swiper-item flex">
           <div class="productsBg forklift"></div>
-          <p @click="toProducts('forklift')">激光导航堆高叉车</p>
+          <p @click="toProducts('forklift')">{{this.$store.state.forklift.nameCn}}</p>
         </swiper-slide>
-        <swiper-slide class="swiper-item flex">
+        <!-- <swiper-slide class="swiper-item flex">
           <div class="productsBg agv4"></div>
           <p @click="toProducts('forklift')">激光导航AGV</p>
-        </swiper-slide>
-        <swiper-slide class="swiper-item flex">
-          <div class="productsBg agv4"></div>
-          <p @click="toProducts('forklift')">激光导航AGV</p>
-        </swiper-slide>
+        </swiper-slide> -->
       </swiper>
     </div>
   </div>
@@ -66,7 +66,6 @@ export default {
       }
     }
   }
-
 }
 </script>
 
@@ -124,13 +123,16 @@ export default {
   .productsBg{
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 80px;
     height: 80px;
     margin-right: 15px;
   }
   .agv4{
     background-image: url("../../assets/images/agv4.png");
+  }
+  .lanJingLing{
+    background-image: url("../../assets/images/agvLanJingLing.png")
   }
   .forklift{
     background-image: url("../../assets/images/forklift.png");

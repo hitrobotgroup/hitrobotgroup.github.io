@@ -13,8 +13,8 @@
           <div class="coverTitleBox flex">
             <div class="noneBox"></div>
             <div class="titleBox">
-              <h1>轻载室内激光导航AGV</h1>
-              <h5>LIGHT LOAD INDOOR LIDAR NAVIGATION AGV</h5>
+              <h1>激光SLAM叉车</h1>
+              <h5>LIDAR SLAM NAVIGATION FORKLIFT</h5>
             </div>
           </div>
         </div>
@@ -476,7 +476,7 @@ html,body {
       background-position: center;
       background-size: contain;
       margin-top: 40px;
-      background-image: url("../../assets/images/agv4.png");
+      background-image: url("../../assets/images/forklift.png");
     }
     .logoBox{
       position: absolute;
@@ -633,7 +633,7 @@ html,body {
 }
   .qrcodeBg{
     background-image: url("../../assets/images/qrcode.jpg");
-    background-size: 30%;
+    background-size: 20%;
     height: 40vh;
     width: 100%;
     background-repeat: no-repeat;

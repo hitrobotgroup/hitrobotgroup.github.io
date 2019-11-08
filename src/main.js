@@ -16,8 +16,10 @@ Vue.prototype.$video = Video
 //swiper animate
 
 
-new Vue({
+var vue = new Vue({
   store,
   router,
   render: h => h(App)
 }).$mount('#app')
+
+export default vue;

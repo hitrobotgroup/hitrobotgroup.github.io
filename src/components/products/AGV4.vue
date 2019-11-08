@@ -634,7 +634,7 @@ html,body {
 }
   .qrcodeBg{
     background-image: url("../../assets/images/qrcode.jpg");
-    background-size: 30%;
+    background-size: 20%;
     height: 40vh;
     width: 100%;
     background-repeat: no-repeat;
