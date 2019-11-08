@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>NavigationIcon.png">
+    <title>众导机器人</title>
+    <script>
+      var width = Math.min(window.innerHeight, window.innerWidth);
+  
+      var fontSize = width <= 600 ? width / 375 * 100 : 100;
+  
+      document.documentElement.style.fontSize = fontSize + 'px';
+      
+      </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but hrg_website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

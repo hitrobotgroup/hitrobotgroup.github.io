@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 483.6 255.4" style="enable-background:new 0 0 483.6 255.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#595757;stroke-width:0.5;stroke-dasharray:2,2;}
+	.st1{fill:#10386B;}
+	.st2{fill:none;stroke:#595757;stroke-width:0.5;}
+	.st3{fill:none;}
+	.st4{fill:#595757;}
+	.st5{font-family:'MicrosoftYaHei';}
+	.st6{font-size:8px;}
+	.st7{font-size:6px;}
+	.st8{fill:#231815;}
+	.st9{font-size:4px;}
+	.st10{fill:none;stroke:#231815;stroke-width:0.46;}
+	.st11{fill:none;stroke:#E60012;stroke-width:0.5;}
+</style>
+<title>hitrobot_logo_standard_blue</title>
+<g id="图层_2">
+	<g id="图层_1-2">
+		<line class="st0" x1="159.9" y1="0" x2="159.9" y2="152.3"/>
+		<line class="st0" x1="127.8" y1="0" x2="127.8" y2="152.3"/>
+		<line class="st0" x1="127.7" y1="0.3" x2="452.6" y2="0.3"/>
+		<line class="st0" x1="420.1" y1="0.4" x2="420.1" y2="152.4"/>
+		<line class="st0" x1="452.3" y1="0.4" x2="452.3" y2="152.3"/>
+		<polygon class="st1" points="402.3,83.9 362.6,83.9 358,92.9 381.8,92.9 390.3,110.1 337.5,110.1 363.8,57 370.7,70.7 395.7,70.7 
+			376.5,32.5 349.1,32.5 307.3,116.2 289.4,80.6 318.1,80.6 342.1,32.5 256.7,32.5 237.1,71.6 210.1,71.6 229.7,32.5 202.9,32.5 
+			159.3,119.4 186.2,119.4 205.6,80.6 232.6,80.6 213.1,119.4 240,119.4 279,41.5 312.4,41.5 296.8,71.6 270.8,71.6 265,83.3 
+			282.9,119.4 419.9,119.4 		"/>
+		<polygon class="st1" points="247.5,245.5 241.1,245.5 240.3,246.9 244.2,246.9 245.6,249.8 237,249.8 241.3,241.1 242.4,243.3 
+			246.5,243.3 243.3,237.1 238.9,237.1 232,250.8 229.1,244.9 233.8,244.9 237.7,237.1 223.8,237.1 220.6,243.5 216.2,243.5 
+			219.4,237.1 215,237.1 207.9,251.3 212.3,251.3 215.4,244.9 219.9,244.9 216.7,251.3 221.1,251.3 227.4,238.6 232.9,238.6 
+			230.3,243.5 226.1,243.5 225.1,245.4 228.1,251.3 250.4,251.3 		"/>
+		<polyline class="st2" points="204.4,237.2 191.2,237.2 191.2,251.9 204.2,251.9 		"/>
+		<line class="st3" x1="127.7" y1="32.3" x2="452.2" y2="32.3"/>
+		<line class="st0" x1="127.7" y1="32.3" x2="452.2" y2="32.3"/>
+		<line class="st3" x1="128.2" y1="119.9" x2="452.8" y2="119.9"/>
+		<line class="st0" x1="128.2" y1="119.9" x2="452.8" y2="119.9"/>
+		<line class="st3" x1="452.6" y1="151.7" x2="128.1" y2="151.7"/>
+		<line class="st0" x1="452.6" y1="151.7" x2="128.1" y2="151.7"/>
+		<text transform="matrix(0.95 0 0 1 127.67 224.2201)" class="st4 st5 st6">最小使用规范为：5mm</text>
+		<text transform="matrix(0.95 0 0 1 478.2695 59.0301)" class="st4 st5 st6">A</text>
+		<text transform="matrix(0.95 0 0 1 434 18.41)" class="st4 st5 st6">A</text>
+		<text transform="matrix(0.95 0 0 1 140.5098 18.41)" class="st4 st5 st6">A</text>
+		<text transform="matrix(0.95 0 0 1 434 137.9901)" class="st4 st5 st6">A</text>
+		<text transform="matrix(0.95 0 0 1 140.5098 137.9901)" class="st4 st5 st6">A</text>
+		<text transform="matrix(0.95 0 0 1 128.22 251.1095)" class="st4 st5 st7">5mm</text>
+		<text transform="matrix(1 0 0 1 6.9133 180.7134)" class="st8 st5 st9">最小安全空间的规定</text>
+		<line class="st10" x1="96" y1="147.9" x2="137.9" y2="79"/>
+		<circle class="st8" cx="137.9" cy="79" r="2.6"/>
+		<line class="st11" x1="270.8" y1="71.6" x2="477.7" y2="71.6"/>
+		<line class="st11" x1="270.8" y1="41.8" x2="477.7" y2="41.8"/>
+		<line class="st11" x1="468.3" y1="41.9" x2="468.3" y2="71.3"/>
+	</g>
+</g>
+</svg>
