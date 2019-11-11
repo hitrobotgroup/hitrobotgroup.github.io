@@ -92,7 +92,7 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[4]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[5]"></headerTitle>
         <div class="centerBgBox manualPositionBg"></div>
         <div class="detailBox txtLeft">
           <p>1、点击手动定位按钮，提示“请点击地图并拖动圆点对机器人进行手动定位”;</p>
@@ -101,19 +101,7 @@
         </div>
       </div>
     </swiper-slide>
-
-    <swiper-slide class="swiper-item">
-      <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[5]"></headerTitle>
-        <div class="centerBgBox trajectoryBg"></div>
-        <div class="detailBox txtLeft">
-          <p>1、点击轨迹按钮，显示轨迹列表，再选择点击“添加轨迹”按钮;</p>
-          <p>2、输入轨迹名称，选择站点，并点击提交;</p>
-          <p>3、新建完成之后的轨迹可在轨迹列表中查看；</p>
-          <p>注：轨迹名称建议由英文，数字，下划线拼接，如：test_1</p>
-        </div>
-      </div>
-    </swiper-slide>
+    
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
@@ -133,24 +121,11 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[6]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[7]"></headerTitle>
         <div class="centerBgBox systemUpdateBg"></div>
         <div class="detailBox txtLeft">
           <p>1、点击“系统更新按钮”弹出更新单选框，并选择更新方式之后确定提交按钮;</p>
           <p>注：确保机器人连接外网状态，否则更新失败</p>
-        </div>
-      </div>
-    </swiper-slide>
-
-    <swiper-slide class="swiper-item">
-      <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[7]"></headerTitle>
-        <div class="centerBgBox systemUpdateBg"></div>
-        <div class="detailBox txtLeft">
-          <p>1、点击轨迹按钮，显示轨迹列表，再选择点击“添加轨迹”按钮;</p>
-          <p>2、输入轨迹名称，选择站点，并点击提交;</p>
-          <p>3、新建完成之后的轨迹可在轨迹列表中查看；</p>
-          <p>注：轨迹名称建议由英文，数字，下划线拼接，如：test_1</p>
         </div>
       </div>
     </swiper-slide>
@@ -195,42 +170,42 @@ export default {
         first: false,
         firstTitle: "TITLE",
         title: "开机",
-        num: 1
+        num: 4
       },{
         first: false,
         firstTitle: "TITLE",
         title: "创建新地图",
-        num: 1
+        num: 5
       },{
         first: false,
         firstTitle: "TITLE",
         title: "添加站点",
-        num: 1
+        num: 6
       },{
         first: false,
         firstTitle: "TITLE",
         title: "添加轨迹",
-        num: 1
+        num: 7
       },{
         first: false,
         firstTitle: "TITLE",
         title: "手动定位",
-        num: 1
+        num: 8
       },{
         first: false,
         firstTitle: "TITLE",
         title: "网络设置",
-        num: 1
+        num: 9
       },{
         first: false,
         firstTitle: "TITLE",
         title: "系统更新",
-        num: 1
+        num: 10
       },{
         first: false,
         firstTitle: "TITLE",
         title: "联系我们",
-        num: 1
+        num: 11
       }],
       swiperOptionAGV4: {
         direction: 'vertical',

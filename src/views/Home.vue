@@ -1,56 +1,29 @@
 <template>
   <swiper :options="swiperOption" class="swiper-box">
     <swiper-slide class="swiper-item"><Index1></Index1></swiper-slide>
-    <swiper-slide class="swiper-item">
-      <div class="agvBox agv4">
+    <swiper-slide class="swiper-item" v-for="(item, index) in products" :key="index">
+      <div class="agvBox" :class="item.name">
         <div class="maskBox">
-          <div class="animated bounce" :class="this.$store.state.pageIndex === 1 ? 'slideInRight': ''">
-            <h1>{{this.$store.state.agv4.nameCn}}</h1>
-            <p>{{this.$store.state.agv4.nameEn}}</p>
+          <div class="animated bounce" :class="$store.state.pageIndex === index ? 'slideInRight': ''">
+            <h1>{{item.titleCn}}</h1>
+            <p>{{item.titleEn}}</p>
             <ul class="teseList clear">
-              <li>高精度</li>
-              <li>续航久</li>
-              <li>负载重</li>
-              <li>自动充电</li>
-              <li>低成本</li>
-              <li>激光导航</li>
+              <li v-for="(listItem, num) in item.list" :key="num">{{listItem}}</li>
             </ul>
           </div>
           
-          <div class="aniBtn flex animated bounce" :class="this.$store.state.pageIndex === 1 ? 'slideInUp': ''">
-						<button class="moreBtn" @click="toProducts('AGV4')">了解更多</button>
-						<div class="anim" @click="toProducts('AGV4')"></div>
+          <div class="aniBtn flex animated bounce" >
+						<button class="moreBtn" @click="toProduct(item.name)">了解更多</button>
+						<div class="anim" @click="toProduct(item.name)"></div>
 					</div>
         </div>
       </div>
     </swiper-slide>
-    <swiper-slide class="swiper-item">
-      <div class="agvBox forklift">
-        <div class="maskBox">
-          <div class="animated bounce" :class="this.$store.state.pageIndex === 2 ? 'slideInRight': ''">
-            <h1>{{this.$store.state.forklift.nameCn}}</h1>
-            <p>{{this.$store.state.forklift.nameEn}}</p>
-            <ul class="teseList clear">
-              <li>高精度</li>
-              <li>续航久</li>
-              <li>可定制</li>
-              <li>自动作业</li>
-              <li>低成本</li>
-              <li>激光导航</li>
-            </ul>
-          </div>
-          
-          <div class="aniBtn flex animated bounce" :class="this.$store.state.pageIndex === 2 ? 'slideInRight': ''">
-						<button class="moreBtn" @click="toProducts('forklift')">了解更多</button>
-						<div class="anim" @click="toProducts('forklift')"></div>
-					</div>
-        </div>
-      </div>
-    </swiper-slide>
+    
     <swiper-slide class="swiper-item">
       <div class="agvBox swj">
         <div class="maskBox" >
-          <div class="animated bounce" :class="this.$store.state.pageIndex === 2 ? 'slideInRight': ''">
+          <div class="animated bounce" >
             <h1>上位机操作使用说明书</h1>
             <p>Instructions for the operation of the upper machine</p>
             <ul class="teseList clear">
@@ -62,9 +35,9 @@
               <li>更直观</li>
             </ul>
           </div>
-          <div class="aniBtn flex animated bounce" :class="this.$store.state.pageIndex === 2 ? 'slideInRight': ''">
-						<button class="moreBtn" @click="toProducts('upperMachine')">了解更多</button>
-						<div class="anim" @click="toProducts('forklift')"></div>
+          <div class="aniBtn flex animated bounce" :class="$store.state.pageIndex === 2 ? 'slideInRight': ''">
+						<button class="moreBtn" @click="toProduct('upperMachine')">了解更多</button>
+						<div class="anim" @click="toProduct('upperMachine')"></div>
 					</div>
         </div>
       </div>
@@ -74,10 +47,10 @@
 </template>
 
 <script>
-import vue from '@/main.js'
+import { store } from '@/main.js'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import Index1 from "@/components/index/index1"
-
+import {toProducts} from '../assets/js/methods.js'
 export default {
   components:{
     swiper,
@@ -89,6 +62,25 @@ export default {
   },
   data(){
     return{
+      products:[{
+        titleCn: "轻载室内激光导航AGV",
+        titleEn: "LIGHT LOAD INDOOR LIDAR NAVIGATION AGV",
+        list: ["高精度","续航久","负载重","自动充电","低成本","激光导航"],
+        name: "AGV4",
+        image: "../../assets/images/agv4.png"
+      },{
+        titleCn: "轻载室内激光导航AGV-蓝精灵",
+        titleEn: "LIGHT LOAD INDOOR LIDAR NAVIGATION AGV",
+        list: ["高精度","续航久","负载重","自动充电","低成本","激光导航"],
+        name: "agvLanJingLing",
+        image: "../../assets/images/agvLanJingLing.png"
+      },{
+        titleCn: "L型激光导航堆高叉车",
+        titleEn: "L LIFT LIDAR SLAM NAVIGATION FORKLIFT",
+        list: ["高精度","续航久","可定制","自动作业","低成本","激光导航"],
+        name: "forklift",
+        image: "../../assets/images/forklift.png"
+      }],
       swiperOption: {
         direction: 'vertical',
         slidesPerView: 1,
@@ -110,7 +102,7 @@ export default {
 
           //改变时
           slideChange: function(){
-            vue.$store.commit("pageIndex",this.activeIndex)
+            store.commit("pageIndex",this.activeIndex)
           }
         }
       }
@@ -126,17 +118,8 @@ export default {
     
   },
   methods:{
-    toProducts:function(type){
-      switch(type){
-        case 'AGV4':
-          this.$router.push({path: '/AGV4'})
-          break;
-          case 'forklift':
-            this.$router.push({path: '/forklift1'})
-            break;
-        case 'upperMachine':
-          this.$router.push({path: '/UpperMachine'})
-      }
+    toProduct:function(type){
+      toProducts(type)
     },
     indexFun:function(num){
       this.index = num;
@@ -186,11 +169,15 @@ html,body {
     width: 100%;
     height: 100%;
   }
-  .agv4{
+  .AGV4{
     background-image: url("../assets/images/agv4.png");
   }
   .forklift{
     background-image: url("../assets/images/forklift.png");
+  }
+  .agvLanJingLing{
+    background-image: url("../assets/images/agvLanJingLing.png");
+    background-size: 50%;
   }
   .swj{
     background-image: url("../assets/images/SWJBg.png");

@@ -13,8 +13,8 @@
           <div class="coverTitleBox flex">
             <div class="noneBox"></div>
             <div class="titleBox">
-              <h1>轻载室内激光导航AGV</h1>
-              <h5>LIGHT LOAD INDOOR LIDAR NAVIGATION AGV</h5>
+              <h1>轻载室内激光导航AGV4.0</h1>
+              <h5>LIGHT LOAD INDOOR LIDAR NAVIGATION AGV4.0</h5>
             </div>
           </div>
         </div>
@@ -71,6 +71,38 @@
         <headerTitle :titleData="contentsBoj[3]"></headerTitle>
         <div class="centerBgBox">
           <div class="bootAndUse">
+            <div>
+              <div class="secondTitle">工作环境</div>
+              <p>AGV允许在人流拥挤的环境下工作</p>
+              <p>AGV只允许在室内工作，且最小通道宽度为1.2M</p>
+              <p>注：请尽量避开玻璃门、坑洼、松散的电缆、绳子和体积大反射性强的物体</p>
+            </div>
+            <div>
+              <div class="secondTitle">建图</div>
+              <p>当AGV处于新环境时，可通过激光雷达扫描对新环境进行建图操作，保存至AGV，可进行切换地图分支操作</p>
+            </div>
+            <div>
+              <div class="secondTitle">路径规划</div>
+              <p>AGV会按照规定的路线运行至目标站点，如遇到未知的障碍物时，会自动避开障碍物运行至目标站点</p>
+            </div>
+            <div>
+              <div class="secondTitle">手动定位</div>
+              <p>如AGV出现定位丢失问题，用户可通过上位机手动定位</p>
+            </div>
+            <div>
+              <div class="secondTitle">避障系统</div>
+              <p>利用多传感器融合技术及SLAM视觉算法，可自动识别障碍物并判断运行/停止</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="swiper-item">
+      <div class="swiperSlide">
+        <headerTitle :titleData="contentsBoj[4]"></headerTitle>
+        <div class="centerBgBox">
+          <div class="bootAndUse">
             <p>确认AGV开机是否在建图原点，开机后约等待15秒</p>
             <p>按下急停后，观察灯带闪烁红色；再次按下急停，观察等待闪烁蓝色即完成开机</p>
             <div class="useBox">
@@ -99,7 +131,7 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[4]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[5]"></headerTitle>
         <div class="centerBgBox">
           <div class="bootAndUse">
             <p>确认AGV回到停靠位置，先关闭电源，再按下急停按钮；灯带熄灭即完成关机</p>
@@ -126,7 +158,34 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[6]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[7]"></headerTitle>
+        <div class="centerBgBox">
+          <div class="bootAndUse">
+            <p>确认AGV回到停靠位置，先关闭电源，再按下急停按钮；灯带熄灭即完成关机</p>
+            <div class="useBox">
+                <div class="useList flex">
+                  <div>粉尘等级(GB/T5817-2009)</div>
+                  <div>0级</div>
+                  <div>I级</div>
+                  <div>II级</div>
+                </div>
+                <div class="useList flex">
+                  <div>激光雷达清洁周期</div>
+                  <div>30天</div>
+                  <div>7天</div>
+                  <div>1天</div>
+                </div>
+              </div>
+              <p>定期用配件专用擦拭布清洁激光雷达，以达到最好的导航效果</p>
+              <p>在现场环境恶劣的情况下，请酌情缩短激光雷达擦拭周期</p>
+            </div>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="swiper-item">
+      <div class="swiperSlide">
+        <headerTitle :titleData="contentsBoj[8]"></headerTitle>
         <div class="centerBgBox">
           <div class="bootAndUse">
             <p>1、AGV不能用来运送人；</p>
@@ -149,7 +208,7 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[7]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[9]"></headerTitle>
         <div class="centerBgBox">
           <div class="bootAndUse">
             <p><span class="strong">操作说明：</span>从网页上（可支持PC，手机以及平板）监控AGV状态，并为用户提供方便和直观的操作界面</p>
@@ -169,7 +228,7 @@
 
     <swiper-slide class="swiper-item">
       <div class="swiperSlide">
-        <headerTitle :titleData="contentsBoj[9]"></headerTitle>
+        <headerTitle :titleData="contentsBoj[10]"></headerTitle>
         <div class="centerBgBox qrcodeBg"></div>
         <div class="detailBox txtLeft contactBox flex">
           <p>电话：021-50900203</p>
@@ -217,38 +276,43 @@ export default {
       },{
         first: false,
         firstTitle: "TITLE",
-        title: "开机及使用",
+        title: "特点介绍",
         num: 6
       },{
         first: false,
         firstTitle: "TITLE",
+        title: "开机及使用",
+        num: 7
+      },{
+        first: false,
+        firstTitle: "TITLE",
         title: "关机及充电",
-        num: 7
-      },{
-        first: false,
-        firstTitle: "TITLE",
-        title: "维护保养",
-        num: 7
-      },{
-        first: false,
-        firstTitle: "TITLE",
-        title: "设备安全",
         num: 8
       },{
         first: false,
         firstTitle: "TITLE",
-        title: "注意事项",
+        title: "维护保养",
+        num: 8
+      },{
+        first: false,
+        firstTitle: "TITLE",
+        title: "设备安全",
         num: 9
+      },{
+        first: false,
+        firstTitle: "TITLE",
+        title: "注意事项",
+        num: 10
       },{
         first: false,
         firstTitle: "TITLE",
         title: "产品性能故障表",
-        num: 9
+        num: 11
       },{
         first: false,
         firstTitle: "TITLE",
         title: "联系我们",
-        num: 10
+        num: 12
       }],
       swiperOptionAGV4: {
         direction: 'vertical',
@@ -294,22 +358,17 @@ export default {
         specs:"rigel-5T",
         num: 1
       },{
-        name:"顶升盘",
-        manufacturers: "HRG",
-        specs:"450*450mm或610*450mm",
-        num: 1
-      },{
-        name:"激光雷达",
-        manufacturers: "北阳hokuyo",
-        specs:"ust20lx",
+        name:"激光传感器",
+        manufacturers: "西克",
+        specs:"S30B-2011GB",
         num: 1
       },{
         name:"电池",
-        manufacturers: "HRG",
-        specs:"48V 14AH",
+        manufacturers: "三元锂电池，索尼电芯",
+        specs:"选配",
         num: 1
       },{
-        name:"充电桩",
+        name:"自动充电桩",
         manufacturers: "HRG",
         specs:"48V 10A",
         num: 1
@@ -321,33 +380,28 @@ export default {
       },{
         name:"工控机",
         manufacturers: "英特尔Intel",
-        specs:"Nuci3",
+        specs:"I7处理器",
         num: 1
       },{
-        name:"万向轮",
-        manufacturers: "向荣Supo",
-        specs:"J05-01-75",
+        name:"DC模块",
+        manufacturers: "明纬",
+        specs:"24V稳压电源",
         num: 4
       },{
-        name:"牛眼轮",
-        manufacturers: "米思米Misumi",
-        specs:"BCUFH120",
-        num: 4
-      },{
-        name:"控制器",
-        manufacturers: "西门子Siemens",
-        specs:"Logo8.2",
+        name:"微控制器",
+        manufacturers: "AMR",
+        specs:"Cortex-M4处理器内核",
         num: 1
       }],
       params:[{
         title: "自重",
-        value: "60±10KG"
+        value: "50±150KG"
       },{
         title: "额定功率",
-        value: "400W"
+        value: "300W"
       },{
         title: "负载",
-        value: "500KG"
+        value: ">300KG"
       },{
         title: "通信方式",
         value: "WIFI，Ethernet"
@@ -359,13 +413,13 @@ export default {
         value: "激光SLAM 自然导航"
       },{
         title: "离地高度",
-        value: "35.5mm"
+        value: "30mm"
       },{
         title: "避障方式",
         value: "激光避障+防撞面"
       },{
         title: "运行速度",
-        value: "1m/s"
+        value: "1.3m/s"
       },{
         title: "旋转半径",
         value: "305mm"
@@ -376,6 +430,12 @@ export default {
         title: "通信接口",
         value: "自建基站或WIFI"
       },{
+        title: "串口",
+        value: "RS-232通信接口"
+      },{
+        title: "可编程IO口",
+        value: "16进16出"
+      },{
         title: "电池",
         value: "锂电池"
       },{
@@ -383,25 +443,28 @@ export default {
         value: "1个"
       },{
         title: "充电时长",
-        value: "≤1.5h"
+        value: "≤3.5h"
       },{
         title: "温度要求",
-        value: "5℃～40℃"
+        value: "-5℃～40℃"
       },{
         title: "工作时长",
-        value: "≤6h"
+        value: "≤9h"
       },{
         title: "充电方式",
         value: "自动充电坞/手动充电器"
       },{
         title: "尺寸",
-        value: "610*450*245mm（不含牛眼轮）"
+        value: "70*600*400mm"
       },{
         title: "定位精度",
         value: "±5mm"
       },{
         title: "越障能力",
         value: "间隙：<15mm  台阶：<15mm  坡度：<5°"
+      },{
+        title: "悬挂系统",
+        value: "主动"
       },{
         title: "使用环境",
         value: "硬质混凝土或毛毡垫构成的水平地面"

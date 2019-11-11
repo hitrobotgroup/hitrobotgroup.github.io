@@ -1,23 +1,23 @@
 <template>
   <div class="index1 flex">
     <div class="logoCodeBox">
-      <div class="logoBox"></div>
+      <div class="logoBox" @click="toHRGWebsite"></div>
       <div class="codeBox"></div>
-      <div class="tel"><h1>021-50900203</h1></div>
+      <div class="tel"><h1><a :href="'tel:' + phone">{{phone}}</a></h1></div>
     </div>
     <div class="swiperBox">
       <swiper :options="productsSwiperOption" class="swiperProducts">
         <swiper-slide class="swiper-item flex">
           <div class="productsBg agv4"></div>
-          <p @click="toProducts('AGV4')">{{this.$store.state.agv4.nameCn}}</p>
+          <p @click="toProduct('AGV4')">{{this.$store.state.agv4.nameCn}}</p>
         </swiper-slide>
         <swiper-slide class="swiper-item flex">
           <div class="productsBg lanJingLing"></div>
-          <p @click="toProducts('forklift')">{{this.$store.state.ljl.nameCn}}</p>
+          <p @click="toProduct('agvLanJingLing')">{{this.$store.state.ljl.nameCn}}</p>
         </swiper-slide>
         <swiper-slide class="swiper-item flex">
           <div class="productsBg forklift"></div>
-          <p @click="toProducts('forklift')">{{this.$store.state.forklift.nameCn}}</p>
+          <p @click="toProduct('forklift')">{{this.$store.state.forklift.nameCn}}</p>
         </swiper-slide>
         <!-- <swiper-slide class="swiper-item flex">
           <div class="productsBg agv4"></div>
@@ -30,6 +30,7 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import {toProducts} from '../../assets/js/methods.js'
 export default {
   components:{
     swiper,
@@ -40,6 +41,7 @@ export default {
   },
   data(){
     return{
+      phone: '021-50900203',
       productsSwiperOption: {
         direction: 'horizontal',
         slidesPerView: 2,
@@ -58,12 +60,11 @@ export default {
     
   },
   methods:{
-    toProducts:function(type){
-      switch(type){
-        case 'AGV4':
-          this.$router.push({path: '/AGV4'})
-          break;
-      }
+    toProduct:function(type){
+      toProducts(type)
+    },
+    toHRGWebsite:function(){
+      window.location.href = 'http://www.hrgrobotics.cn/';
     }
   }
 }
@@ -86,6 +87,7 @@ export default {
         height: 70px;
         background: url("../../assets/images/logo.png") no-repeat center;
         background-size: contain;
+        cursor: pointer;
       }
       .codeBox{
         margin: 15px 0;
@@ -97,7 +99,9 @@ export default {
     }
   }
   .tel{
-    color: #10386b
+    a{
+      color: #10386b
+    }
   }
   .swiperBox{
     width: 100%;
