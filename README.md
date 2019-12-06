@@ -23,7 +23,7 @@
 | xxxxx12*        | capella 1G      |     |       | 
 |                 |                 |                 |                 |
 | 2e9cd10         | rigel 4X        | hitrobot-io     | | 192.168.43.210
-| 2e9cd09         | rigel 4X        | hitrobot-io     | | 192.168.43.209
+| 2e9cd09         | rigel 4X        | hitrobot-io     | 1478757887      | 192.168.43.209
 | 2e9cd08         | rigel 4X        | hitrobot-io     | 1696384390      | 192.168.43.208
 | 2e9cd07         | rigel 4X        | hitrobot-io     | 1631675375      | 192.168.43.207
 | 2e9cd06         | rigel 4X        | hitrobot-io     | 1411504692      | 192.168.43.206
@@ -31,27 +31,50 @@
 | 2e9cd04         | rigel 4S        | hrg-highly-ah   | 1425570285      | 192.168.43.204
 | 2e9cd03         | rigel 4S        | hrg-highly-ah   | 1430004978      | 192.168.43.203
 | 2e9cd02         | rigel 4S        | hrg-highly-sh   | 1408958779      | 192.168.43.202
-| 2e9cd01         | rigel 4S        | hrg-highly-ah   |       | 192.168.43.201
+| 2e9cd01         | rigel 4S        | hrg-highly-ah   |                 | 192.168.43.201
 |                 |                 |                 |                 |
 | 2e7cf01         | rigel 4S        | hrg-intel-sh    | 1467606344      | 192.168.43.201
 | 2e7cf02         | rigel 4S        | hrg-intel-sh    | 1251343921      | 192.168.43.202
 | 2e7cf03         | rigel 4S        | hrg-intel-sh    | 1276703383      | 192.168.43.203
 | 2e7cf04         | rigel 4T        | hrg-exhibit-nc  | 1264141700      | 192.168.43.204
-| 2e7cf05         | rigel 4T        |    | 1285832347      | 192.168.43.205
-| 2e7cf06         | rigel 4T        |    |       | 192.168.43.206
-| 2e7cf07         | rigel 4T        |    |       | 192.168.43.207
-| 2e7cf08         | rigel 4S        |    | 1318967941      | 192.168.43.208
+| 2e7cf05         | rigel 4T        |                 | 1285832347      | 192.168.43.205
+| 2e7cf06         | rigel 4T        |                 |                 | 192.168.43.206
+| 2e7cf07         | rigel 4T        |                 |                 | 192.168.43.207
+| 2e7cf08         | rigel 4S        |                 | 1318967941      | 192.168.43.208
 |                 |                 |                 |                 |
-| 2e76101         | tailin 2        | hrg-tailin-hz   | 1317271828      | 192.168.43.201
-| 2e76102         | tailin 2        | hrg-tailin-hz   | 1208624931      | 192.168.43.202
-| 2e76103         | tailin 2        | hrg-tailin-hz   | 1311861379      | 192.168.43.203
-| 2e76104         | tailin 2        | hrg-tailin-hz   | 1208621102      | 192.168.43.204
-| 2e76105         | tailin 2        | hrg-tailin-hz   | 1212652648      | 192.168.43.205
-| 2e76106         | tailin 2        | hrg-tailin-hz   | 1207926530      | 192.168.43.206
-| 2e76107         | tailin 2        | hrg-tailin-hz   | 1214637975      | 192.168.43.207
-| 2e76108         | tailin 2        | hrg-tailin-hz   | 1216102393      | 192.168.43.208
-| 2e76109         | tailin 2        | hrg-tailin-hz   | 1214639585      | 192.168.43.209
-| 2e76110         | tailin 2        | hrg-tailin-hz   | 1432350207      | 192.168.43.210
+| router          | huawei 4G       | hrg-innolux     | 17717874207     | 10.63.151.96
+| 2c05101         | rigel 4S        | hrg-innolux     | 
+| 2c05102         | rigel 4S        | hrg-innolux     | 934675869
+| 2c05103         | rigel 4S        | hrg-innolux     | 
+| 2c05104         | rigel 4S        | hrg-innolux     | 
+| 2c05105         | rigel 4T        | hrg-innolux     | 792309666
+| 2c05106         | rigel 4S        | hrg-innolux     | 
+| 2c05107         | rigel 4S        | hrg-innolux     | 
+| 2c13200         | arcturus 1D     | hrg-innolux     | 878192267       | 10.63.155.11
+| 2c13201         | rigel 4S        | hrg-innolux     | 
+| 2c13202         | rigel 4T        | hrg-innolux     | 
+| 2c13203         | rigel 4S        | hrg-innolux     | 
+| 2c13204         | rigel 4T        | hrg-innolux     | 
+| 2c13299         | arcturus 1D     | hrg-innolux     | 922650891
+| 2c19301         | rigel 4T        | hrg-innolux     | 
+| 2c19302         | rigel 4S        | hrg-innolux     | 
+| 2c19303         | rigel 4S        | hrg-innolux     | 
+| 2c19304         | rigel 4S        | hrg-innolux     | 
+| 2c19305         | rigel 4S        | hrg-innolux     | 
+| 2c19306         | rigel 4S        | hrg-innolux     | 
+| 2c19307         | rigel 4S        | hrg-innolux     | 
+| 2c19308         | rigel 4T        | hrg-innolux     | 1060983589
+|                 |                 |                 |                 |
+| 2e76101         | ster 2          | hrg-tailin-hz   | 1317271828      | 192.168.43.201
+| 2e76102         | ster 2          | hrg-tailin-hz   | 1208624931      | 192.168.43.202
+| 2e76103         | ster 2          | hrg-tailin-hz   | 1311861379      | 192.168.43.203
+| 2e76104         | ster 2          | hrg-tailin-hz   | 1208621102      | 192.168.43.204
+| 2e76105         | ster 2          | hrg-tailin-hz   | 1212652648      | 192.168.43.205
+| 2e76106         | ster 2          | hrg-tailin-hz   | 1207926530      | 192.168.43.206
+| 2e76107         | ster 2          | hrg-tailin-hz   | 1214637975      | 192.168.43.207
+| 2e76108         | ster 2          | hrg-tailin-hz   | 1216102393      | 192.168.43.208
+| 2e76109         | ster 2          | hrg-tailin-hz   | 1214639585      | 192.168.43.209
+| 2e76110         | ster 2          | hrg-tailin-hz   | 1432350207      | 192.168.43.210
 |                 |                 |                 |                 |
 | 2e70001         | rigel 4T        | hrg-ccb-sh      | 1343905131      | 192.168.43.201
 | 2e70002         | rigel 4T        | hrg-ccb-sh      | 1336897509      | 192.168.43.202
@@ -78,54 +101,31 @@
 | 2c38a02         | rigel 4T        | KSFSK-RGV       | 1317925817      | 192.168.59.112
 | 2c38a03         | rigel 4T        | KSFSK-RGV       | 1028009040      | 192.168.59.113
 |                 |                 |                 |                 |
-| 2c2a801         | rigel 4T        | hrg-conti       | 1044134503      | 192.168.43.201
-| 2c2a802         | rigel 4S        | hrg-conti       | 1026431999      | 192.168.43.202
+| 2c2a801         | rigel 4T        | hrg-conti-tj    | 1044134503      | 192.168.43.201
+| 2c2a802         | rigel 4S        | hrg-conti-tj    | 1026431999      | 192.168.43.202
 |                 |                 |                 |                 |
-| router          | huawei 4G       | hrg-guoxuan     | 18380126235     | 172.17.11.1
-| ‭2c25e01         | LD200-PD        | hrg-guoxuan     | 1099131165      | 172.17.11.152
-| ‭2c25e‬02         | LD200-PD        | hrg-guoxuan     | 1100363879      | 172.17.11.153
-| 2c25e03         | LD200-PD        | hrg-guoxuan     | 1103446039      | 172.17.11.154
-| 2c25e04         | LD200-PD        | hrg-guoxuan     | 1099115702      | 172.17.11.155
-| 2c25e05         | LD200-PD        | hrg-guoxuan     | 1107075576      | 172.17.11.156
-| 2c25e06         | LD500-QF        | hrg-guoxuan     | 1106892064      | 172.17.11.157
-| 2c25e07         | LD500-QF        | hrg-guoxuan     | 1108642630      | 172.17.11.158
-| 2c25e08         | LD500-QF        | hrg-guoxuan     | 1104621283      | 172.17.11.159
-| 2c25e09         | LD500-QF        | hrg-guoxuan     | 1107688495      | 172.17.11.160
-| 2c25e10         | LD500-QF        | hrg-guoxuan     | 1107710419      | 172.17.11.161
-| 2c25e11         | BJSMI-ML        | hrg-guoxuan     | 1106940343      | 192.168.8.211
-| 2c25e12         | BJSMI-ML        | hrg-guoxuan     | 1100280621      | 192.168.8.212
+| router          | huawei 4G       | hrg-guoxuan-hf  | 18380126235     | 172.17.11.1
+| ‭2c25e01         | LD200-PD        | hrg-guoxuan-hf  | 1099131165      | 172.17.11.152
+| ‭2c25e‬02         | LD200-PD        | hrg-guoxuan-hf  | 1100363879      | 172.17.11.153
+| 2c25e03         | LD200-PD        | hrg-guoxuan-hf  | 1103446039      | 172.17.11.154
+| 2c25e04         | LD200-PD        | hrg-guoxuan-hf  | 1099115702      | 172.17.11.155
+| 2c25e05         | LD200-PD        | hrg-guoxuan-hf  | 1107075576      | 172.17.11.156
+| 2c25e06         | LD500-QF        | hrg-guoxuan-hf  | 1106892064      | 172.17.11.157
+| 2c25e07         | LD500-QF        | hrg-guoxuan-hf  | 1108642630      | 172.17.11.158
+| 2c25e08         | LD500-QF        | hrg-guoxuan-hf  | 1104621283      | 172.17.11.159
+| 2c25e09         | LD500-QF        | hrg-guoxuan-hf  | 1107688495      | 172.17.11.160
+| 2c25e10         | LD500-QF        | hrg-guoxuan-hf  | 1107710419      | 172.17.11.161
+| 2c25e11         | BJSMI-ML        | hrg-guoxuan-hf  | 1106940343      | 192.168.8.211
+| 2c25e12         | BJSMI-ML        | hrg-guoxuan-hf  | 1100280621      | 192.168.8.212
 |                 |                 |                 |                 |
-| 2c25701         | SZ-GT           | hrg-shenzhou    | 1043080077      | 192.168.43.201
-| 2c25702         | SZ-GT           | hrg-shenzhou    | 1018242700      | 192.168.43.202
+| 2c25701         | SZ-GT           | hrg-shenzhou-cd | 1043080077      | 192.168.43.201
+| 2c25702         | SZ-GT           | hrg-shenzhou-cd | 1018242700      | 192.168.43.202
 |                 |                 |                 |                 |
-| router          | huawei 4G       | hrg-innolux     | 17717874207     | 10.63.151.96
-| 2c05101         | rigel 4S        | hrg-innolux     | 
-| 2c05102         | rigel 4S        | hrg-innolux     | 934675869
-| 2c05103         | rigel 4S        | hrg-innolux     | 
-| 2c05104         | rigel 4S        | hrg-innolux     | 
-| 2c05105         | rigel 4T        | hrg-innolux     | 792309666
-| 2c05106         | rigel 4S        | hrg-innolux     | 
-| 2c05107         | rigel 4S        | hrg-innolux     | 
-| 2c13200         | arcturus 1D     | hrg-innolux     | 878192267       | 10.63.155.11
-| 2c13201         | rigel 4S        | hrg-innolux     | 
-| 2c13202         | rigel 4T        | hrg-innolux     | 
-| 2c13203         | rigel 4S        | hrg-innolux     | 
-| 2c13204         | rigel 4T        | hrg-innolux     | 
-| 2c13299         | arcturus 1D     | hrg-innolux     | 922650891
-| 2c19301         | rigel 4T        | hrg-innolux     | 
-| 2c19302         | rigel 4S        | hrg-innolux     | 
-| 2c19303         | rigel 4S        | hrg-innolux     | 
-| 2c19304         | rigel 4S        | hrg-innolux     | 
-| 2c19305         | rigel 4S        | hrg-innolux     | 
-| 2c19306         | rigel 4S        | hrg-innolux     | 
-| 2c19307         | rigel 4S        | hrg-innolux     | 
-| 2c19308         | rigel 4T        | hrg-innolux     | 1060983589
+| router          | huawei 4G       | hrg-harman-sz   | 17717874307     | 192.168.0.200
+| 2c0cc01         | rigel 4T        | hrg-harman-sz   | 841414351       | 192.168.0.201
+| 2c0cc02         | rigel 4T        | hrg-harman-sz   | 1285832347      | 192.168.0.202
 |                 |                 |                 |                 |
-| router          | huawei 4G       | hrg-harman      | 17717874307     | 192.168.0.200
-| 2c0cc01         | rigel 4T        | hrg-harman      | 841414351       | 192.168.0.201
-| 2c0cc02         | rigel 4T        | hrg-harman      | 1285832347      | 192.168.0.202
-|                 |                 |                 |                 |
-| 29ccc01         | rigel 4S        | hrg-kunshan     | 406041545       | 192.168.3.233
+| 29ccc01         | rigel 4S        | hrg-sample-ks   | 406041545       | 192.168.3.233
 | 29ccc02         | rigel 4S        | hrg-exhibit-ks  | null            | 192.168.43.202
 | 29ccc03         | rigel 4S        | hrg-exhibit-sh  | null            | 192.168.43.203
 | 29ccc04         | rigel 4S        | hrg-exhibit-yw  | null            | 192.168.43.204
@@ -133,33 +133,43 @@
 | 29ccc06         | rigel 4S        | hrg-lslb-sh     | null            | 192.168.43.206
 | 29ccc07         | rigel 3S        | hrg-exhibit-ks  | null            | 192.168.43.207
 |                 |                 |                 |                 |
-| router          | huawei 4G       | hrg-yancon      | 13370233723     | 192.168.8.1
-| router          | tplink wifi 5G  | hrg-yancon      | null            | 192.168.8.2
-| 29b3100         | arcturus 1B win | hrg-yancon      | 1036959340      | 192.168.8.200
-| 29b3101         | L500K-GD        | hrg-yancon      | 1355230640      | 192.168.8.201
-| 29b3102         | L500K-GD        | hrg-yancon      | 1090347283      | 192.168.8.202
-| 29b3103         | L500K-GD        | hrg-yancon      | 1137526472      | 192.168.8.203
-| 29b3104         | L500K-GD        | hrg-yancon      | 1128732754      | 192.168.8.204
-| 29b3105         | L500K-LT        | hrg-yancon      | 1130064914      | 192.168.8.205
-| 29b3106         | L500K-LT        | hrg-yancon      | 1354459849      | 192.168.8.206
-| 29b3107         | L500K-LT        | hrg-yancon      | 1138313304      | 192.168.8.207
-| 29b3108         | L500K-LT        | hrg-yancon      | 1135116559      | 192.168.8.208
-| 29ae700         | arcturus 1B     | hrg-yancon      | 216351583       | 192.168.8.200
-| 29ae701         | capella 1D      | hrg-yancon      | 1041913709      | 192.168.8.211
-| 29ae702         | capella 1D      | hrg-yancon      | 115129885       | 192.168.8.212
-| 29ae703         | capella 1D      | hrg-yancon      | 970186345       | 192.168.8.213
-| 29ae704         | capella 1D      | hrg-yancon      | 125976047       | 192.168.8.214
-| 29ae705         | capella 1D      | hrg-yancon      | 125941387       | 192.168.8.215
+| router          | huawei 4G       | hrg-yancon-sd   | 13370233723     | 192.168.8.1
+| router          | tplink 5G wifi  | hrg-yancon-sd   | null            | 192.168.8.2
+| 29b3100         | arcturus 1B win | hrg-yancon-sd   | 1036959340      | 192.168.8.200
+| 29b3101         | L500K-GD        | hrg-yancon-sd   | 1355230640      | 192.168.8.201
+| 29b3102         | L500K-GD        | hrg-yancon-sd   | 1090347283      | 192.168.8.202
+| 29b3103         | L500K-GD        | hrg-yancon-sd   | 1137526472      | 192.168.8.203
+| 29b3104         | L500K-GD        | hrg-yancon-sd   | 1128732754      | 192.168.8.204
+| 29b3105         | L500K-LT        | hrg-yancon-sd   | 1130064914      | 192.168.8.205
+| 29b3106         | L500K-LT        | hrg-yancon-sd   | 1354459849      | 192.168.8.206
+| 29b3107         | L500K-LT        | hrg-yancon-sd   | 1138313304      | 192.168.8.207
+| 29b3108         | L500K-LT        | hrg-yancon-sd   | 1135116559      | 192.168.8.208
+| 29ae700         | arcturus 1B     | hrg-yancon-sd   | 216351583       | 192.168.8.210
+| 29ae701         | capella 1D      | hrg-yancon-sd   | 1041913709      | 192.168.8.211
+| 29ae702         | capella 1D      | hrg-yancon-sd   | 115129885       | 192.168.8.212
+| 29ae703         | capella 1D      | hrg-yancon-sd   | 970186345       | 192.168.8.213
+| 29ae704         | capella 1D      | hrg-yancon-sd   | 125976047       | 192.168.8.214
+| 29ae705         | capella 1D      | hrg-yancon-sd   | 125941387       | 192.168.8.215
+|                 |                 |                 |                 |
+| 2e76101         | ster            | hrg-tailin-hz   | 1317271828      | 192.168.43.201
+| 2e76102         | ster            | hrg-tailin-hz   | 1208624931      | 192.168.43.202
+| 2e76103         | ster            | hrg-tailin-hz   | 1311861379      | 192.168.43.203
+| 2e76104         | ster            | hrg-tailin-hz   | 1208621102      | 192.168.43.204
+| 2e76105         | ster            | hrg-tailin-hz   | 1212652648      | 192.168.43.205
+| 2e76106         | ster            | hrg-tailin-hz   | 1207926530      | 192.168.43.206
+| 2e76107         | ster            | hrg-tailin-hz   | 1214637975      | 192.168.43.207
+| 2e76108         | ster            | hrg-tailin-hz   | 1216102393      | 192.168.43.208
+| 2e76109         | ster            | hrg-tailin-hz   | 1214639585      | 192.168.43.209
+| 2e76110         | ster            | hrg-tailin-hz   | 1432350207      | 192.168.43.210
 |                 |                 |                 |                 |
 | 298ef01         | rigel 2S        | hrg-extern      | null            | 192.168.43.201
 | 298ef02         | rigel 2S        | hrg-extern      | null            | 192.168.43.202
 | 298ef03         | rigel 2S        | hrg-extern      | null            | 192.168.43.203
 | 298ef04         | rigel 2S        | hrg-extern      | null            | 192.168.43.204
-| 298ef05         | rigel 1S        | hrg-shanghai    | 1491337737      | 192.168.43.233
+| 298ef05         | rigel 1S        | hrg-sample-sh   | 1491337737      | 10.1.16.233
 | 298ef06         | rigel 2S        | hrg-extern      | null            | 192.168.43.206
 | 298ef07         | rigel 2S        | hrg-extern      | null            | 192.168.43.207
 |                 |                 |                 |                 |
-| vega            | vega            | hrg-shanghai    | 13370031713     | 192.168.8.1
 
 ***
 
