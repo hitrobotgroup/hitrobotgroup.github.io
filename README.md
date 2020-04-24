@@ -2,7 +2,8 @@
 
 | Serial No.      | Type            | SSID            | TVID            | IP
 | --------------- | --------------- | --------------- | --------------- | ---------------
-| 2e90b10         | rigel 5T        | hitrobot-io     | 1347981983      | 192.168.43.210
+| 2e90b11         | rigel 5T        | hitrobot-io     |       | 192.168.43.211
+| 2e90b10         | rigel 5T        | hitrobot-io     |       | 192.168.43.210
 | 2e90b09         | rigel 5T        | hitrobot-io     | 1415658612      | 192.168.43.209
 | 2e90b08         | rigel 5T        | hrg-jabil-gz    | 1319527015      | 192.168.43.208
 | 2e90b07         | rigel 5T        | hrg-jabil-gz    | 1295454572      | 192.168.43.207
@@ -12,7 +13,7 @@
 | 2e6ac03         | rigel 5T        | hrg-tdk-zh      | 1171915509      | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
-| 2e90b00         | rigel 5T        | hitrobot-io     | 1565397674      | 192.168.43.200
+| 2e90b00         | rigel 5T        | hitrobot-io     |       | 192.168.43.200
 |                 |                 |                 |                 |
 | xxxxx17*        | capella 2E      |     |       | 
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
