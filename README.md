@@ -16,7 +16,7 @@
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
 | 2e90b00         | rigel 5T        | hitrobot-io     |       | 192.168.43.200
 |                 |                 |                 |                 |
-| 30f4217         | capella 2E      | hitrobot-io     |       | 192.168.43.217
+| 30f4217         | capella 2E      | hitrobot-io     | 1674456985      | 192.168.43.217
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
 | 30f4214         | capella 1G      | hitrobot-io     | 1672042998      | 192.168.43.214
