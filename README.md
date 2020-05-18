@@ -19,7 +19,7 @@
 | 30f4217         | capella 2E      |     |       | 
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
-| 30f4214         | capella 1G      | hitrobot-io     | 1672002258      | 192.168.43.214
+| 30f4214         | capella 1G      | hitrobot-io     | 1672042998      | 192.168.43.214
 | 30f4213         | capella 1G      | hitrobot-io     | 1667510165      | 192.168.43.213
 | 30f4212         | capella 1G      | hitrobot-io     | 1661957058      | 192.168.43.212
 |                 |                 |                 |                 |
