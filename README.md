@@ -11,7 +11,7 @@
 | 2e89706         | rigel 5T        | hrg-jabil-gz    | 1303841536      | 192.168.43.206
 | 2e82805         | rigel 5T        | hrg-jabil-gz    | 1493200192      | 192.168.43.205
 | 2e71004         | rigel 5T        | hrg-jabil-wh    | 1189609434      | 192.168.43.204
-| 2e6ac03         | rigel 5T        | hrg-tdk-zh      | 1171915509      | 192.168.43.203
+| 30ee803         | rigel 5T        | hrg-exhibt      | 305112762       | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
 | 30ee800         | rigel 5T        | hitrobot-io     | 1892171205      | 192.168.43.200
