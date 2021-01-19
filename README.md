@@ -36,7 +36,7 @@
 |                 |                 |                 |                 |
 | 2e9cd10         | rigel 4X        | hitrobot-io     | 1476451630      | 192.168.43.210
 | 2e9cd09         | rigel 4X        | hitrobot-io     | 1478757887      | 192.168.43.209
-| 2e9cd08         | rigel 4X        | hitrobot-io     | 1696384390      | 192.168.43.208
+| 2e9cd08         | rigel 4X        | hrg-wurth-tj    | 1696384390      | 192.168.43.208
 | 2e9cd07         | rigel 4X        | hitrobot-io     | 1631675375      | 192.168.43.207
 | 2e9cd06         | rigel 4X        | hitrobot-io     | 1411504692      | 192.168.43.206
 | 2e9cd05         | rigel 4X        | hitrobot-io     | 1415529238      | 192.168.43.205
@@ -51,7 +51,7 @@
 | 2e7cf04         | rigel 4T        | hrg-exhibit-nc  | 1264141700      | 192.168.43.204
 | 2e7cf05         | rigel 4T        |                 | 1285832347      | 192.168.43.205
 | 2e7cf06         | rigel 4T        |                 |                 | 192.168.43.206
-| 2e7cf07         | rigel 4T        |                 |                 | 192.168.43.207
+| 2e7cf07         | rigel 4T        | hrg-wurth-tj    |                 | 192.168.43.207
 | 2e7cf08         | rigel 4S        |                 | 1318967941      | 192.168.43.208
 |                 |                 |                 |                 |
 | router          | huawei 4G       | hrg-innolux     | 17717874207     | 10.63.151.96
