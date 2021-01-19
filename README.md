@@ -51,7 +51,7 @@
 | 2e7cf04         | rigel 4T        | hrg-exhibit-nc  | 1264141700      | 192.168.43.204
 | 2e7cf05         | rigel 4T        |                 | 1285832347      | 192.168.43.205
 | 2e7cf06         | rigel 4T        |                 |                 | 192.168.43.206
-| 2e7cf07         | rigel 4T        | hrg-wurth-tj    |                 | 192.168.43.207
+| 2e7cf07         | rigel 4T        | hrg-wurth-tj    | 786000570       | 192.168.43.207
 | 2e7cf08         | rigel 4S        |                 | 1318967941      | 192.168.43.208
 |                 |                 |                 |                 |
 | router          | huawei 4G       | hrg-innolux     | 17717874207     | 10.63.151.96
