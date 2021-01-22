@@ -2,18 +2,20 @@
 
 | Serial No.      | Type            | SSID            | TVID            | IP
 | --------------- | --------------- | --------------- | --------------- | ---------------
-| 3120723         | rigel 5T        | hitrobot-io     | 690786622       | 192.168.43.223
-| 3120722         | rigel 5T        | hitrobot-io     | 690765989       | 192.168.43.222
-| 3120721         | rigel 5T        | hitrobot-io     | 690797933       | 192.168.43.221
-| 30ee820         | rigel 5T        | hitrobot-io     | 455040363       | 192.168.43.220
-| 30ee819         | rigel 5T        | hitrobot-io     |       | 192.168.43.219
-| 30ee818         | rigel 5T        | hitrobot-io     |       | 192.168.43.218
-| 30ee817         | rigel 5T        | hitrobot-io     |       | 192.168.43.217
-| 30ee816         | rigel 5T        | hitrobot-io     |       | 192.168.43.216
-| 30ee815         | rigel 5T        | hitrobot-io     |       | 192.168.43.215
-| 30ee814         | rigel 5T        | hitrobot-io     |       | 192.168.43.214
-| 30ee813         | rigel 5T        | hitrobot-io     |       | 192.168.43.213
-| 30ee812         | rigel 5T        | hitrobot-io     | 1674275307      | 192.168.43.212
+| 334cd25         | rigel 5T        | hrg-jabil-wx    | 790023098       | 192.168.43.225
+| 334cd24         | rigel 5T        | hrg-jabil-wx    | 789977773       | 192.168.43.224
+| 3120723         | rigel 6T        | hrg-aiko-tj     | 690786622       | 192.168.43.223
+| 3120722         | rigel 6T        | hrg-aiko-tj     | 690765989       | 192.168.43.222
+| 3120721         | rigel 6T        | hrg-aiko-tj     | 690797933       | 192.168.43.221
+| 30ee820         | rigel 5T        | hrg-exhibit-sx  | 455040363       | 192.168.43.220
+| 30ee819         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.219
+| 30ee818         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.218
+| 30ee817         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.217
+| 30ee816         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.216
+| 30ee815         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.215
+| 30ee814         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.214
+| 30ee813         | rigel 5T        | eryi-sj         |       | 192.168.43.213
+| 30ee812         | rigel 5T        | eryi-ks         | 1674275307      | 192.168.43.212
 | 30ee811         | rigel 5T        | hrg-jabil-wx    | 1641974105      | 192.168.43.211
 | 30ee810         | rigel 5T        | hrg-jabil-wx    | 1566218791      | 192.168.43.210
 | 2e90b09         | rigel 5T        | hrg-jabil-wx    | 1415658612      | 192.168.43.209
@@ -22,7 +24,7 @@
 | 2e89706         | rigel 5T        | hrg-jabil-gz    | 1303841536      | 192.168.43.206
 | 2e82805         | rigel 5T        | hrg-jabil-gz    | 1493200192      | 192.168.43.205
 | 2e71004         | rigel 5T        | hrg-jabil-wh    | 1189609434      | 192.168.43.204
-| 30ee803         | rigel 5T        | hrg-exhibt      | 305112762       | 192.168.43.203
+| 30ee803         | rigel 5T        | hrg-ruijin-sh   | 305112762       | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
 | 30ee800         | rigel 5T        | hitrobot-io     | 1892171205      | 192.168.43.200
