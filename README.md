@@ -29,12 +29,12 @@
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
 | 30ee008         | arcturus 2B     | hrg-jabil-wx    | 664209599       | 192.168.43.200
 |                 |                 |                 |                 |
-| 30f4219         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.219
-| 30f4218         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.218
+| 30f4219         | capella 1G      | hrg-eupro-tj    | 797226720       | 192.168.43.219
+| 30f4218         | capella 1G      | hrg-eupro-tj    | 797165232       | 192.168.43.218
 | 30f4217         | capella 2E      | hitrobot-io     | xxxxxxx         | 192.168.43.217
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
-| 30f4214         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.214
+| 30f4214         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.43.214
 | 30f4213         | capella 1G      | hrg-jabil-wx    | 1574194848      | 192.168.43.213
 | 30f4212         | capella 1G      | hitrobot-io     | xxxxxxx         | 192.168.43.212
 |                 |                 |                 |                 |
