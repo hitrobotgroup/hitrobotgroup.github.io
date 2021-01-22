@@ -10,7 +10,7 @@
 | 30ee820         | rigel 5T        | hrg-exhibit-sx  | 455040363       | 192.168.43.220
 | 30ee819         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.219
 | 30ee818         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.218
-| 30ee817         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.217
+| 30ee817         | rigel 5T        | hrg-jabil-wx    | 549070183       | 192.168.43.217
 | 30ee816         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.216
 | 30ee815         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.215
 | 30ee814         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.214
@@ -27,34 +27,36 @@
 | 30ee803         | rigel 5T        | hrg-ruijin-sh   | 305112762       | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
-| 30ee800         | rigel 5T        | hitrobot-io     | 1892171205      | 192.168.43.200
+| 334cd00         | rigel 5S        | hitrobot-io     | xxxxxxx         | 192.168.43.200
 |                 |                 |                 |                 |
-| 30f4217         | capella 2E      | hitrobot-io     | 1674456985      | 192.168.43.217
+| 30f4219         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.219
+| 30f4218         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.218
+| 30f4217         | capella 2E      | hitrobot-io     | xxxxxxx         | 192.168.43.217
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
-| 30f4214         | capella 1G      | hitrobot-io     | 1672042998      | 192.168.43.214
-| 30f4213         | capella 1G      | hitrobot-io     | 1667510165      | 192.168.43.213
-| 30f4212         | capella 1G      | hitrobot-io     | 1661957058      | 192.168.43.212
+| 30f4214         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.214
+| 30f4213         | capella 1G      | hrg-jabil-wx    | 1574194848      | 192.168.43.213
+| 30f4212         | capella 1G      | hitrobot-io     | xxxxxxx         | 192.168.43.212
 |                 |                 |                 |                 |
 | 2e9cd10         | rigel 4X        | hitrobot-io     | 1476451630      | 192.168.43.210
 | 2e9cd09         | rigel 4X        | hitrobot-io     | 1478757887      | 192.168.43.209
-| 2e9cd08         | rigel 4X        | hrg-wurth-tj    | 1696384390      | 192.168.43.208
+| 2e9cd08         | rigel 4T        | hrg-wurth-tj    | 1696384390      | 192.168.43.208
 | 2e9cd07         | rigel 4X        | hitrobot-io     | 1631675375      | 192.168.43.207
 | 2e9cd06         | rigel 4X        | hitrobot-io     | 1411504692      | 192.168.43.206
 | 2e9cd05         | rigel 4X        | hitrobot-io     | 1415529238      | 192.168.43.205
 | 2e9cd04         | rigel 4S        | hrg-highly-ah   | 1425570285      | 192.168.43.204
 | 2e9cd03         | rigel 4S        | hrg-highly-ah   | 1430004978      | 192.168.43.203
 | 2e9cd02         | rigel 4S        | hrg-highly-sh   | 1408958779      | 192.168.43.202
-| 2e9cd01         | rigel 4S        | hrg-highly-ah   |                 | 192.168.43.201
+| 2e9cd01         | rigel 4S        | hrg-highly-ah   | xxxxxxx         | 192.168.43.201
 |                 |                 |                 |                 |
 | 2e7cf01         | rigel 4S        | hrg-intel-sh    | 1467606344      | 192.168.43.201
 | 2e7cf02         | rigel 4S        | hrg-intel-sh    | 1251343921      | 192.168.43.202
 | 2e7cf03         | rigel 4S        | hrg-intel-sh    | 1276703383      | 192.168.43.203
 | 2e7cf04         | rigel 4T        | hrg-exhibit-nc  | 1264141700      | 192.168.43.204
-| 2e7cf05         | rigel 4T        |                 | 1285832347      | 192.168.43.205
-| 2e7cf06         | rigel 4T        |                 |                 | 192.168.43.206
+| 2e7cf05         | rigel 4T        | hitrobot-io     | 1285832347      | 192.168.43.205
+| 2e7cf06         | rigel 4T        | hitrobot-io     | xxxxxxx         | 192.168.43.206
 | 2e7cf07         | rigel 4T        | hrg-wurth-tj    | 786000570       | 192.168.43.207
-| 2e7cf08         | rigel 4S        |                 | 1318967941      | 192.168.43.208
+| 2e7cf08         | rigel 4S        | hitrobot-io     | 1318967941      | 192.168.43.208
 |                 |                 |                 |                 |
 | router          | huawei 4G       | hrg-innolux     | 17717874207     | 10.63.151.96
 | 2c05101         | rigel 4S        | hrg-innolux     | 
@@ -93,7 +95,7 @@
 | 2e70001         | rigel 4T        | hrg-ccb-sh      | 1343905131      | 192.168.43.201
 | 2e70002         | rigel 4T        | hrg-ccb-sh      | 1336897509      | 192.168.43.202
 |                 |                 |                 |                 |
-| *               | arcturus 1E     | hrg-wurth-tj    | *               | *
+| null            | arcturus 1E     | hrg-wurth-tj    | 1297776563      | xxx.xxx.xxx.xxx
 | 2c3de01         | rigel 4T        | hrg-wurth-tj    | 1073476094      | 192.168.43.201
 | 2c3de02         | rigel 4T        | hrg-wurth-tj    | 1073487910      | 192.168.43.202
 | 2c3de03         | rigel 4T        | hrg-wurth-tj    | 1301723761      | 192.168.43.203
@@ -108,12 +110,12 @@
 | 2c3d704         | capella 1G      | hrg-eupro-tj    | 1095758823      | 192.168.8.214
 | 2c3d705         | capella 1G      | hrg-eupro-tj    | 1089135627      | 192.168.8.215
 |                 |                 |                 |                 |
-| xxxxx01         | rigel 4S        | hrg-diehl-nj    | 986240921       | *
+| xxxxx01         | rigel 4S        | hrg-diehl-nj    | 986240921       | 10.42.0.1
 |                 |                 |                 |                 |
-| *               | arcturus 1E     | KSFSK-RGV       | *               | *
-| 2c38a01         | rigel 4T        | KSFSK-RGV       | 1271780295      | 192.168.59.111
-| 2c38a02         | rigel 4T        | KSFSK-RGV       | 1317925817      | 192.168.59.112
-| 2c38a03         | rigel 4T        | KSFSK-RGV       | 1028009040      | 192.168.59.113
+| null            | arcturus 1E     | hrg-foxcomm-ks  | null            | xxx.xxx.xxx.xxx
+| 2c38a01         | rigel 4T        | hrg-foxcomm-ks  | 1271780295      | 192.168.59.111
+| 2c38a02         | rigel 4T        | hrg-foxcomm-ks  | 1317925817      | 192.168.59.112
+| 2c38a03         | rigel 4T        | hrg-foxcomm-ks  | 1028009040      | 192.168.59.113
 |                 |                 |                 |                 |
 | 2c2a801         | rigel 4T        | hrg-conti-tj    | 1044134503      | 192.168.43.201
 | 2c2a802         | rigel 4S        | hrg-conti-tj    | 1026431999      | 192.168.43.202
@@ -139,7 +141,7 @@
 | 2c0cc01         | rigel 4T        | hrg-harman-sz   | 841414351       | 192.168.0.201
 | 2c0cc02         | rigel 4T        | hrg-harman-sz   | 1285832347      | 192.168.0.202
 |                 |                 |                 |                 |
-| 29ccc01         | rigel 4S        | hrg-sample-ks   | 406041545       | 192.168.3.233
+| 29ccc01         | rigel 4S        | hrg-sample-sh   | xxxxxxx         | 10.42.0.1
 | 29ccc02         | rigel 4S        | hrg-exhibit-ks  | null            | 192.168.43.202
 | 29ccc03         | rigel 4S        | hrg-exhibit-sh  | null            | 192.168.43.203
 | 29ccc04         | rigel 4S        | hrg-exhibit-yw  | null            | 192.168.43.204
@@ -180,7 +182,7 @@
 | 298ef02         | rigel 2S        | hrg-extern      | null            | 192.168.43.202
 | 298ef03         | rigel 2S        | hrg-extern      | null            | 192.168.43.203
 | 298ef04         | rigel 2S        | hrg-extern      | null            | 192.168.43.204
-| 298ef05         | rigel 1S        | hrg-sample-sh   | 1491337737      | 10.1.16.233
+| 298ef05         | rigel 1S        | hrg-sample-sh   | xxxxxxx         | 10.42.0.1
 | 298ef06         | rigel 2S        | hrg-extern      | null            | 192.168.43.206
 | 298ef07         | rigel 2S        | hrg-extern      | null            | 192.168.43.207
 |                 |                 |                 |                 |
