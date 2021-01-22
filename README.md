@@ -8,13 +8,13 @@
 | 3120722         | rigel 6T        | hrg-aiko-tj     | 690765989       | 192.168.43.222
 | 3120721         | rigel 6T        | hrg-aiko-tj     | 690797933       | 192.168.43.221
 | 30ee820         | rigel 5T        | hrg-exhibit-sx  | 455040363       | 192.168.43.220
-| 30ee819         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.219
-| 30ee818         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.218
+| 30ee819         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.219
+| 30ee818         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.218
 | 30ee817         | rigel 5T        | hrg-jabil-wx    | 549070183       | 192.168.43.217
-| 30ee816         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.216
-| 30ee815         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.215
-| 30ee814         | rigel 5T        | hrg-jabil-wx    |       | 192.168.43.214
-| 30ee813         | rigel 5T        | eryi-sj         |       | 192.168.43.213
+| 30ee816         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.216
+| 30ee815         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.215
+| 30ee814         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.214
+| 30ee813         | rigel 5T        | eryi-sj         | xxxxxxx         | 192.168.43.213
 | 30ee812         | rigel 5T        | eryi-ks         | 1674275307      | 192.168.43.212
 | 30ee811         | rigel 5T        | hrg-jabil-wx    | 1641974105      | 192.168.43.211
 | 30ee810         | rigel 5T        | hrg-jabil-wx    | 1566218791      | 192.168.43.210
