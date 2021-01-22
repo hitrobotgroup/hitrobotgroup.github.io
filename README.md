@@ -27,7 +27,7 @@
 | 30ee803         | rigel 5T        | hrg-ruijin-sh   | 305112762       | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
-| 334cd00         | rigel 5S        | hitrobot-io     | xxxxxxx         | 192.168.43.200
+| 30ee008         | arcturus 2B     | hrg-jabil-wx    | 664209599       | 192.168.43.200
 |                 |                 |                 |                 |
 | 30f4219         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.219
 | 30f4218         | capella 1G      | hrg-eupro-tj    | xxxxxxx         | 192.168.43.218
