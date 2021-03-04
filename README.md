@@ -24,7 +24,7 @@
 | 2e90b07         | rigel 5T        | hrg-jabil-gz    | 1295454572      | 192.168.43.207
 | 2e89706         | rigel 5T        | hrg-jabil-gz    | 1303841536      | 192.168.43.206
 | 2e82805         | rigel 5T        | hrg-jabil-gz    | 1493200192      | 192.168.43.205
-| 2e71004         | rigel 5T        | hrg-jabil-wh    | 1189609434      | 192.168.43.204
+| 2e71004         | rigel 5T        | hrg-jabil-wh    | 892964902       | 192.168.43.204
 | 30ee803         | rigel 5T        | hrg-ruijin-sh   | 305112762       | 192.168.43.203
 | 2e6a402         | rigel 5T        | hrg-jabil-wx    | 1195328755      | 192.168.43.202
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
