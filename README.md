@@ -13,7 +13,7 @@
 | 30ee818         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.218
 | 30ee817         | rigel 5T        | hrg-jabil-wx    | 549070183       | 192.168.43.217
 | 30ee816         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.216
-| 30ee815         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.215
+| 30ee815         | rigel 5T        | hrg-jabil-wx    | 925170195       | 192.168.43.215
 | 30ee814         | rigel 5T        | hrg-jabil-wx    | xxxxxxx         | 192.168.43.214
 | 30ee813         | rigel 5T        | eryi-sj         | xxxxxxx         | 192.168.43.213
 | 30ee812         | rigel 5T        | eryi-ks         | 1674275307      | 192.168.43.212
