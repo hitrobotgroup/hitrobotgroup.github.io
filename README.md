@@ -103,11 +103,11 @@
 |                 |                 |                 |                 |
 | router          | huawei 4G       | hrg-eupro-tj    | 13370033783     | 192.168.8.1
 | 2bf9800         | arcturus 1C     | hrg-eupro-tj    | 514554481       | 192.168.8.200
-| 2bf9801         | capella 1F      | hrg-eupro-tj    | 1444102831      | 192.168.8.201
+| 30f4201         | capella 1F      | hrg-eupro-tj    | 142011963       | 192.168.8.201
 | 2c3d700         | arcturus 1E     | hrg-eupro-tj    | 1149710217      | 192.168.8.210
 | 2c3d701         | capella 1G      | hrg-eupro-tj    | 1097003912      | 192.168.8.211
 | 30f4212         | capella 1G      | hrg-eupro-tj    | 1018571372      | 192.168.18.192
-| 2c3d703         | capella 1G      | hrg-eupro-tj    | 104632377       | 192.168.18.193
+| 30f4213         | capella 1G      | hrg-eupro-tj    | 104632377       | 192.168.18.193
 | 30f4214         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.18.194
 | 30f4215         | capella 1G      | hrg-eupro-tj    | 141964761       | 192.168.18.195
 |                 |                 |                 |                 |
