@@ -106,10 +106,10 @@
 | 2bf9801         | capella 1F      | hrg-eupro-tj    | 1444102831      | 192.168.8.201
 | 2c3d700         | arcturus 1E     | hrg-eupro-tj    | 1149710217      | 192.168.8.210
 | 2c3d701         | capella 1G      | hrg-eupro-tj    | 1097003912      | 192.168.8.211
-| 2c3d702         | capella 1G      | hrg-eupro-tj    | 1624907334      | 192.168.8.212
-| 2c3d703         | capella 1G      | hrg-eupro-tj    | 1313423539      | 192.168.8.213
-| 2c3d704         | capella 1G      | hrg-eupro-tj    | 1095758823      | 192.168.8.214
-| 2c3d705         | capella 1G      | hrg-eupro-tj    | 1089135627      | 192.168.8.215
+| 30f4212         | capella 1G      | hrg-eupro-tj    | 1018571372      | 192.168.18.192
+| 2c3d703         | capella 1G      | hrg-eupro-tj    | 104632377       | 192.168.18.193
+| 30f4214         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.18.194
+| 30f4215         | capella 1G      | hrg-eupro-tj    | 141964761       | 192.168.18.195
 |                 |                 |                 |                 |
 | xxxxx01         | rigel 4S        | hrg-diehl-nj    | 986240921       | 10.42.0.1
 |                 |                 |                 |                 |
