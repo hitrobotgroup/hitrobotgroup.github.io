@@ -2,6 +2,18 @@
 
 | Serial No.      | Type            | SSID            | TVID            | IP
 | --------------- | --------------- | --------------- | --------------- | ---------------
+| 2bf9800         | arcturus 1C     | hrg-eupro-tj    | 514554481       | 192.168.8.200
+| 2c3d700         | arcturus 1E     | hrg-eupro-tj    | 1149710217      | 192.168.8.210
+| 30f4201         | capella 1F      | hrg-eupro-tj    | 142011963       | 192.168.18.190
+| 30f4211         | capella 1G      | hrg-eupro-tj    | 305384111       | 192.168.18.191
+| 30f4212         | capella 1G      | hrg-eupro-tj    | 1018571372      | 192.168.18.192
+| 30f4213         | capella 1G      | hrg-eupro-tj    | 104632377       | 192.168.18.193
+| 30f4214         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.18.194
+| 30f4215         | capella 1G      | hrg-eupro-tj    | 141964761       | 192.168.18.195
+| 30f4217         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.18.196
+| 30f4218         | capella 1G      | hrg-eupro-tj    | 797165232       | 192.168.18.197
+| 30f4219         | capella 1G      | hrg-eupro-tj    | 797226720       | 192.168.18.198
+|                 |                 |                 |                 |
 | 3352026         | rigel 5S        | hitrobot-io     | 838926953       | 192.168.43.226
 | 334cd25         | rigel 5T        | hrg-jabil-wx    | 790023098       | 192.168.43.225
 | 334cd24         | rigel 5T        | hrg-jabil-wx    | 789977773       | 192.168.43.224
@@ -30,9 +42,6 @@
 | 2e69801         | rigel 5T        | hrg-jabil-gz    | 1169206307      | 192.168.43.201
 | 30ee008         | arcturus 2B     | hrg-jabil-wx    | 664209599       | 192.168.43.200
 |                 |                 |                 |                 |
-| 30f4219         | capella 1G      | hrg-eupro-tj    | 797226720       | 192.168.43.219
-| 30f4218         | capella 1G      | hrg-eupro-tj    | 797165232       | 192.168.43.218
-| 30f4217         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.43.217
 | 2e71116         | capella 2D      | hrg-wxzj-sx     | 1319460263      | 192.168.43.216
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
 | 30f4214         | capella 2E      | hitrobot-io     | xxxxxxx         | 192.168.43.214
@@ -100,16 +109,6 @@
 | 2c3de01         | rigel 4T        | hrg-wurth-tj    | 1073476094      | 192.168.43.201
 | 2c3de02         | rigel 4T        | hrg-wurth-tj    | 1073487910      | 192.168.43.202
 | 2c3de03         | rigel 4T        | hrg-wurth-tj    | 1301723761      | 192.168.43.203
-|                 |                 |                 |                 |
-| router          | huawei 4G       | hrg-eupro-tj    | 13370033783     | 192.168.8.1
-| 2bf9800         | arcturus 1C     | hrg-eupro-tj    | 514554481       | 192.168.8.200
-| 30f4201         | capella 1F      | hrg-eupro-tj    | 142011963       | 192.168.8.201
-| 2c3d700         | arcturus 1E     | hrg-eupro-tj    | 1149710217      | 192.168.8.210
-| 2c3d701         | capella 1G      | hrg-eupro-tj    | 1097003912      | 192.168.8.211
-| 30f4212         | capella 1G      | hrg-eupro-tj    | 1018571372      | 192.168.18.192
-| 30f4213         | capella 1G      | hrg-eupro-tj    | 104632377       | 192.168.18.193
-| 30f4214         | capella 1G      | hrg-eupro-tj    | 797139998       | 192.168.18.194
-| 30f4215         | capella 1G      | hrg-eupro-tj    | 141964761       | 192.168.18.195
 |                 |                 |                 |                 |
 | xxxxx01         | rigel 4S        | hrg-diehl-nj    | 986240921       | 10.42.0.1
 |                 |                 |                 |                 |
