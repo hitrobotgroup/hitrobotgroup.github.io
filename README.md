@@ -46,7 +46,7 @@
 | 2e71115*        | capella 1H      | hrg-jabil-gz    | 1206604628      | 192.168.43.215
 | 30f4214         | capella 2E      | hitrobot-io     | xxxxxxx         | 192.168.43.214
 | 30f4213         | capella 1G      | hrg-jabil-wx    | 1574194848      | 192.168.43.213
-| 30f4212         | capella 1G      | hitrobot-io     | xxxxxxx         | 192.168.43.212
+| 338bat1         | capella 1G      | hitrobot-io     | 523534209       | 192.168.43.212
 |                 |                 |                 |                 |
 | 2e9cd10         | rigel 4X        | hitrobot-io     | 1476451630      | 192.168.43.210
 | 2e9cd09         | rigel 4X        | hitrobot-io     | 1478757887      | 192.168.43.209
